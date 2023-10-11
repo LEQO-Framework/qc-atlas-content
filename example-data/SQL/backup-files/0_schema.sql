@@ -22,6 +22,7 @@ SET default_tablespace = '';
 
 SET default_table_access_method = heap;
 
+CREATE ROLE bloqcat;
 --
 -- TOC entry 202 (class 1259 OID 16390)
 -- Name: algorithm; Type: TABLE; Schema: public; Owner: planqk
@@ -42,7 +43,7 @@ CREATE TABLE public.algorithm (
 );
 
 
-ALTER TABLE public.algorithm OWNER TO planqk;
+ALTER TABLE public.algorithm OWNER TO bloqcat;
 
 --
 -- TOC entry 203 (class 1259 OID 16398)
@@ -55,7 +56,7 @@ CREATE TABLE public.algorithm_application_area (
 );
 
 
-ALTER TABLE public.algorithm_application_area OWNER TO planqk;
+ALTER TABLE public.algorithm_application_area OWNER TO bloqcat;
 
 --
 -- TOC entry 204 (class 1259 OID 16403)
@@ -68,7 +69,7 @@ CREATE TABLE public.algorithm_problem_type (
 );
 
 
-ALTER TABLE public.algorithm_problem_type OWNER TO planqk;
+ALTER TABLE public.algorithm_problem_type OWNER TO bloqcat;
 
 --
 -- TOC entry 205 (class 1259 OID 16408)
@@ -81,7 +82,7 @@ CREATE TABLE public.algorithm_publication (
 );
 
 
-ALTER TABLE public.algorithm_publication OWNER TO planqk;
+ALTER TABLE public.algorithm_publication OWNER TO bloqcat;
 
 --
 -- TOC entry 207 (class 1259 OID 16418)
@@ -97,7 +98,7 @@ CREATE TABLE public.algorithm_relation (
 );
 
 
-ALTER TABLE public.algorithm_relation OWNER TO planqk;
+ALTER TABLE public.algorithm_relation OWNER TO bloqcat;
 
 --
 -- TOC entry 208 (class 1259 OID 16423)
@@ -110,7 +111,7 @@ CREATE TABLE public.algorithm_relation_type (
 );
 
 
-ALTER TABLE public.algorithm_relation_type OWNER TO planqk;
+ALTER TABLE public.algorithm_relation_type OWNER TO bloqcat;
 
 --
 -- TOC entry 206 (class 1259 OID 16413)
@@ -123,7 +124,7 @@ CREATE TABLE public.algorithm_tag (
 );
 
 
-ALTER TABLE public.algorithm_tag OWNER TO planqk;
+ALTER TABLE public.algorithm_tag OWNER TO bloqcat;
 
 --
 -- TOC entry 209 (class 1259 OID 16428)
@@ -136,7 +137,7 @@ CREATE TABLE public.application_area (
 );
 
 
-ALTER TABLE public.application_area OWNER TO planqk;
+ALTER TABLE public.application_area OWNER TO bloqcat;
 
 --
 -- TOC entry 210 (class 1259 OID 16433)
@@ -148,7 +149,7 @@ CREATE TABLE public.classic_algorithm (
 );
 
 
-ALTER TABLE public.classic_algorithm OWNER TO planqk;
+ALTER TABLE public.classic_algorithm OWNER TO bloqcat;
 
 --
 -- TOC entry 211 (class 1259 OID 16438)
@@ -161,7 +162,7 @@ CREATE TABLE public.classic_implementation (
 );
 
 
-ALTER TABLE public.classic_implementation OWNER TO planqk;
+ALTER TABLE public.classic_implementation OWNER TO bloqcat;
 
 --
 -- TOC entry 213 (class 1259 OID 16448)
@@ -178,7 +179,7 @@ CREATE TABLE public.cloud_service (
 );
 
 
-ALTER TABLE public.cloud_service OWNER TO planqk;
+ALTER TABLE public.cloud_service OWNER TO bloqcat;
 
 --
 -- TOC entry 212 (class 1259 OID 16443)
@@ -191,7 +192,7 @@ CREATE TABLE public.cloud_services_compute_resources (
 );
 
 
-ALTER TABLE public.cloud_services_compute_resources OWNER TO planqk;
+ALTER TABLE public.cloud_services_compute_resources OWNER TO bloqcat;
 
 --
 -- TOC entry 214 (class 1259 OID 16456)
@@ -208,7 +209,7 @@ CREATE TABLE public.compute_resource (
 );
 
 
-ALTER TABLE public.compute_resource OWNER TO planqk;
+ALTER TABLE public.compute_resource OWNER TO bloqcat;
 
 --
 -- TOC entry 215 (class 1259 OID 16464)
@@ -225,7 +226,7 @@ CREATE TABLE public.compute_resource_property (
 );
 
 
-ALTER TABLE public.compute_resource_property OWNER TO planqk;
+ALTER TABLE public.compute_resource_property OWNER TO bloqcat;
 
 --
 -- TOC entry 216 (class 1259 OID 16469)
@@ -240,7 +241,7 @@ CREATE TABLE public.compute_resource_property_type (
 );
 
 
-ALTER TABLE public.compute_resource_property_type OWNER TO planqk;
+ALTER TABLE public.compute_resource_property_type OWNER TO bloqcat;
 
 --
 -- TOC entry 217 (class 1259 OID 16477)
@@ -256,7 +257,7 @@ CREATE TABLE public.discussion_comment (
 );
 
 
-ALTER TABLE public.discussion_comment OWNER TO planqk;
+ALTER TABLE public.discussion_comment OWNER TO bloqcat;
 
 --
 -- TOC entry 218 (class 1259 OID 16482)
@@ -273,7 +274,7 @@ CREATE TABLE public.discussion_topic (
 );
 
 
-ALTER TABLE public.discussion_topic OWNER TO planqk;
+ALTER TABLE public.discussion_topic OWNER TO bloqcat;
 
 --
 -- TOC entry 219 (class 1259 OID 16490)
@@ -288,7 +289,7 @@ CREATE TABLE public.image (
 );
 
 
-ALTER TABLE public.image OWNER TO planqk;
+ALTER TABLE public.image OWNER TO bloqcat;
 
 --
 -- TOC entry 220 (class 1259 OID 16498)
@@ -314,7 +315,7 @@ CREATE TABLE public.implementation (
 );
 
 
-ALTER TABLE public.implementation OWNER TO planqk;
+ALTER TABLE public.implementation OWNER TO bloqcat;
 
 --
 -- TOC entry 221 (class 1259 OID 16506)
@@ -327,7 +328,7 @@ CREATE TABLE public.implementation_publication (
 );
 
 
-ALTER TABLE public.implementation_publication OWNER TO planqk;
+ALTER TABLE public.implementation_publication OWNER TO bloqcat;
 
 --
 -- TOC entry 222 (class 1259 OID 16511)
@@ -340,7 +341,7 @@ CREATE TABLE public.implementation_software_platforms (
 );
 
 
-ALTER TABLE public.implementation_software_platforms OWNER TO planqk;
+ALTER TABLE public.implementation_software_platforms OWNER TO bloqcat;
 
 --
 -- TOC entry 223 (class 1259 OID 16516)
@@ -353,7 +354,7 @@ CREATE TABLE public.implementation_tag (
 );
 
 
-ALTER TABLE public.implementation_tag OWNER TO planqk;
+ALTER TABLE public.implementation_tag OWNER TO bloqcat;
 
 --
 -- TOC entry 224 (class 1259 OID 16521)
@@ -367,7 +368,7 @@ CREATE TABLE public.knowledge_artifact (
 );
 
 
-ALTER TABLE public.knowledge_artifact OWNER TO planqk;
+ALTER TABLE public.knowledge_artifact OWNER TO bloqcat;
 
 --
 -- TOC entry 225 (class 1259 OID 16526)
@@ -383,7 +384,7 @@ CREATE TABLE public.pattern_relation (
 );
 
 
-ALTER TABLE public.pattern_relation OWNER TO planqk;
+ALTER TABLE public.pattern_relation OWNER TO bloqcat;
 
 --
 -- TOC entry 226 (class 1259 OID 16534)
@@ -396,7 +397,7 @@ CREATE TABLE public.pattern_relation_type (
 );
 
 
-ALTER TABLE public.pattern_relation_type OWNER TO planqk;
+ALTER TABLE public.pattern_relation_type OWNER TO bloqcat;
 
 --
 -- TOC entry 227 (class 1259 OID 16539)
@@ -410,7 +411,7 @@ CREATE TABLE public.problem_type (
 );
 
 
-ALTER TABLE public.problem_type OWNER TO planqk;
+ALTER TABLE public.problem_type OWNER TO bloqcat;
 
 --
 -- TOC entry 228 (class 1259 OID 16544)
@@ -425,7 +426,7 @@ CREATE TABLE public.publication (
 );
 
 
-ALTER TABLE public.publication OWNER TO planqk;
+ALTER TABLE public.publication OWNER TO bloqcat;
 
 --
 -- TOC entry 229 (class 1259 OID 16552)
@@ -438,7 +439,7 @@ CREATE TABLE public.publication_authors (
 );
 
 
-ALTER TABLE public.publication_authors OWNER TO planqk;
+ALTER TABLE public.publication_authors OWNER TO bloqcat;
 
 --
 -- TOC entry 230 (class 1259 OID 16555)
@@ -453,7 +454,7 @@ CREATE TABLE public.quantum_algorithm (
 );
 
 
-ALTER TABLE public.quantum_algorithm OWNER TO planqk;
+ALTER TABLE public.quantum_algorithm OWNER TO bloqcat;
 
 --
 -- TOC entry 231 (class 1259 OID 16560)
@@ -466,7 +467,7 @@ CREATE TABLE public.quantum_implementation (
 );
 
 
-ALTER TABLE public.quantum_implementation OWNER TO planqk;
+ALTER TABLE public.quantum_implementation OWNER TO bloqcat;
 
 --
 -- TOC entry 232 (class 1259 OID 16565)
@@ -481,7 +482,7 @@ CREATE TABLE public.sketch (
 );
 
 
-ALTER TABLE public.sketch OWNER TO planqk;
+ALTER TABLE public.sketch OWNER TO bloqcat;
 
 --
 -- TOC entry 235 (class 1259 OID 16583)
@@ -497,7 +498,7 @@ CREATE TABLE public.software_platform (
 );
 
 
-ALTER TABLE public.software_platform OWNER TO planqk;
+ALTER TABLE public.software_platform OWNER TO bloqcat;
 
 --
 -- TOC entry 233 (class 1259 OID 16573)
@@ -510,7 +511,7 @@ CREATE TABLE public.software_platform_cloud_services (
 );
 
 
-ALTER TABLE public.software_platform_cloud_services OWNER TO planqk;
+ALTER TABLE public.software_platform_cloud_services OWNER TO bloqcat;
 
 --
 -- TOC entry 234 (class 1259 OID 16578)
@@ -523,7 +524,7 @@ CREATE TABLE public.software_platforms_compute_resources (
 );
 
 
-ALTER TABLE public.software_platforms_compute_resources OWNER TO planqk;
+ALTER TABLE public.software_platforms_compute_resources OWNER TO bloqcat;
 
 --
 -- TOC entry 236 (class 1259 OID 16591)
@@ -536,7 +537,7 @@ CREATE TABLE public.tag (
 );
 
 
-ALTER TABLE public.tag OWNER TO planqk;
+ALTER TABLE public.tag OWNER TO bloqcat;
 
 --
 -- TOC entry 2926 (class 2606 OID 16402)
