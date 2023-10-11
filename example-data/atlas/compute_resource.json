@@ -1,0 +1,34 @@
+[
+   {
+      "dtype":"ComputeResource",
+      "id":"faea0025-9096-4582-b2f9-93096358dbc2",
+      "name":"ibmq_16_melbourne",
+      "quantum_computation_model":0,
+      "technology":"",
+      "vendor":"IBM"
+   },
+   {
+      "dtype":"ComputeResource",
+      "id":"c0fc8141-4d19-4654-910b-109882b4b99b",
+      "name":"ibmq_5_yorktown",
+      "quantum_computation_model":0,
+      "technology":null,
+      "vendor":"IBM"
+   },
+   {
+      "dtype":"ComputeResource",
+      "id":"2e683cee-8363-4327-8765-3b5f957acc90",
+      "name":"Rigetti 19Q",
+      "quantum_computation_model":0,
+      "technology":"Superconducting",
+      "vendor":"Rigetti"
+   },
+   {
+      "dtype":"ComputeResource",
+      "id":"82df8861-b7de-464d-9dab-4adabbe78cd2",
+      "name":"Rigetti 8Q",
+      "quantum_computation_model":0,
+      "technology":"Superconducting",
+      "vendor":"Rigetti"
+   }
+]

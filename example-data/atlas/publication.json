@@ -1,0 +1,26 @@
+[
+   {
+      "doi":"10.1137/S0097539795293172",
+      "title":"Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer",
+      "url":"https://arxiv.org/abs/quant-ph/9508027",
+      "id":"f05c9136-2f9f-433f-9c35-85009111ee3c"
+   },
+   {
+      "doi":"10.1109/TSMCB.2008.925743",
+      "title":"Quantum reinforcement learning",
+      "url":"https://arxiv.org/abs/0810.3828",
+      "id":"87d697a4-6256-4f84-b545-c2024ab380c2"
+   },
+   {
+      "doi":"10.1038/s41586-019-0980-2",
+      "title":"Supervised learning with quantum enhanced feature spaces",
+      "url":"https://arxiv.org/abs/1804.11326",
+      "id":"3aac6a37-10de-4a95-a2bd-381d357df2a4"
+   },
+   {
+      "doi":"10.1016/j.cpc.2019.107006",
+      "title":"Support vector machines on the D-Wave quantum annealer",
+      "url":"https://arxiv.org/abs/1906.06283",
+      "id":"ae6bdf6f-2656-45bd-9b96-0820eea3cdab"
+   }
+]

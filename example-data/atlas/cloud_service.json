@@ -1,0 +1,18 @@
+[
+   {
+      "id":"7ac0786f-4d4d-4ab6-beb8-6d3c9d80857d",
+      "cost_model":null,
+      "description":null,
+      "name":"IBMQ",
+      "provider":"IBM",
+      "url":"https://quantum-computing.ibm.com/"
+   },
+   {
+      "id":"bac9b43d-6ced-41c6-ae85-ef065e280d8b",
+      "cost_model":null,
+      "description":null,
+      "name":"Rigetti",
+      "provider":"Rigetti",
+      "url":"https://www.rigetti.com/"
+   }
+]

@@ -1,0 +1,67 @@
+[
+   {
+      "acronym":null,
+      "algo_parameter":"N: N > 0, N odd",
+      "assumptions":null,
+      "computation_model":1,
+      "input_format":"N: Integer",
+      "intent":"Integer factorization",
+      "name":"Shor",
+      "output_format":"Factors: Integer Array",
+      "problem":"The algorithm of Shor is a ploynomial-time quantum computer algorithm for factorizing integers. It solves the following problem: GIven an integer N, find its prime factors. The American mathematician Peter Shor invented the algorithm in 1994.",
+      "solution":null,
+      "id":"b5df6c13-e619-496c-ada0-80fc3486f733"
+   },
+   {
+      "acronym":"QPE",
+      "algo_parameter":"U: Unitary Matrix; Eigenvector: Eigenvector of U",
+      "assumptions":null,
+      "computation_model":1,
+      "input_format":"U: Float Array; Eigenvector: Integer Array",
+      "intent":"Estimates eigenvalues, or phase, of an eigenvector of a unitary matrix",
+      "name":"Quantum Phase Estimation",
+      "output_format":"Eigenvalue: Float",
+      "problem":"The quantum phase estimation algorithm estimates the eigenvalues, or phase, of an eigenvector of a unitary matrix. It is frequently used as a subroutine in other quantum algorithms, such as the algorithm of Shor.",
+      "solution":null,
+      "id":"b61578ed-df66-44ec-954c-9bcf9906f490"
+   },
+   {
+      "acronym":"QRL1",
+      "algo_parameter":null,
+      "assumptions":null,
+      "computation_model":1,
+      "input_format":null,
+      "intent":"Reinforcement learning",
+      "name":"Quantum Reinforcement Learning 1",
+      "output_format":null,
+      "problem":"With this algorithm, Dong et al. introduce an approach to quantum reinforcement learning (QRL) that takes advantage of effects from quantum physics and works fundamentally different than any classical RL method, however, some similarities still remain. For example, QRL, like classical RL methods, also contain a policy, reward function and an environment. However, Dong et al. note that their QRL algorithm differs to classical RL algorithms in intrinsic parts like representation, policy, parallelism and update operation. States and actions are also different in both approaches. In this QRL method, states are referred to as eigen states and actions as eigen actions and are able to be in a superposition state. Superposition allows the algorithm, among other things, to better balance exploration and exploitation. Recall that in quantum physics, whenever a qubit in superposition is measured, it collapses and takes on one state according to some probability. The algorithm takes advantage of this behaviour in the action selection policy. More specifically, an action is measured in relation to some state and hence collapses to one of its eigen actions according to some probability this action is then selected. This means that the probability of actions that are considered good should be amplified. The probability amplitudes must be updated throughout the algorithm. The method to update the probability amplitude is based on the Grover iteration from Grover’s algorithm, a famous quantum algorithm for database search. The method contains a oracle or black box that is used to tell whether an action is good or bad. Loosely formulated, the complete algorithm works as follows. The first step is to initialize the state and action. After this an action is observed and executed to receive the next state and reward. Then the state value and probability amplitudes are updated accordingly. The probability amplitudes are updated in such a way that the probability for good actions is amplified and shrunk for bad ones. This process is done repeatedly. And so, after a number of episodes, the algorithm is able to learn a policy.",
+      "solution":null,
+      "id":"4ab28e22-cdf9-45f8-b872-f4d9d2757b6d"
+   },
+   {
+      "acronym":"QSVM1",
+      "algo_parameter":null,
+      "assumptions":null,
+      "computation_model":1,
+      "input_format":null,
+      "intent":"Classification",
+      "name":"Quantum Support Vector Machine 1",
+      "output_format":null,
+      "problem":"Havlicek et al. show that a quantum version of the SVM can be implemented in the following way. Two distinct approaches are available for this problem. The first method uses a variational circuit to compute the separating hyperplane while the second method estimates the kernel function in order to optimize the classifier directly. The latter method is then used used as part of a conventional SVM. In both methods the data is provided classically while the quantum state space is used as the feature space. It is furthermore noted that in order to obtain a quantum advantage, the kernel cannot be estimated classically, i.e., if the kernel is too simple, the quantum SVM does not show a quantum advantage over a normal SVM. [Supervised learning with quantum enhanced feature spaces, Havlicek et al.]",
+      "solution":null,
+      "id":"16aa96c5-b668-4df9-a03f-96d323708676"
+   },
+   {
+      "acronym":"QSVM2",
+      "algo_parameter":null,
+      "assumptions":null,
+      "computation_model":1,
+      "input_format":null,
+      "intent":"Classification",
+      "name":"Quantum Support Vector Machine 2",
+      "output_format":null,
+      "problem":"The training of quantum support vector machines (QSVM) can also be run on a quantum annealer, as demonstrated by Willsch et al. in a recent paper. To achieve this, the problem, like any problem solved via quantum annealing (QA), must first be formulated as a QUBO. However, the training of SVMs entails solving equations that contain real numbers whereas a QUBO consists of binary values. Willsch et al. use a special encoding to overcome this and thus are able to formulate the problem as a QUBO. Willsch et al. investigate the performance of their QSVM on a DW2000Q quantum annealer. They note that the quantum annealer returns in addition to the global optimum, a range of solutions that are close to the optimal. They furthermore note that this is advantageous as the generalization ability may potentially be improved by using a combination of the produced solutions. In summary, a QVSM can be trained using via QA by formulating the problem as a QUBO. A QA device, such as the DW2000Q, produces optimal and near-optimal solutions and a combination of these solutions can potentially improve the generalization behaviour.",
+      "solution":null,
+      "id":"9aa16271-6ea1-4e15-ad9d-6e6e264a0ad0"
+   }
+]

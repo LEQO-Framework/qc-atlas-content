@@ -1,0 +1,16 @@
+[
+   {
+      "id":"7c2c4b2e-5b4e-421c-a487-54fd897bfe41",
+      "licence":"Apache-2.0 License",
+      "link":"https://pyquil-docs.rigetti.com/en/stable/",
+      "name":"Forest",
+      "version":null
+   },
+   {
+      "id":"41299c3c-297a-4d61-be24-cc957186306e",
+      "licence":"Apache-2.0 License",
+      "link":"https://github.com/Qiskit/qiskit",
+      "name":"Qiskit",
+      "version":"0.21.0"
+   }
+]
