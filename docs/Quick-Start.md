@@ -33,3 +33,8 @@
     - `password: postgres`
 
 ## 2. Using Docker Volume
+1. clone the repo
+    ```bash
+    git clone
+    cd qc-atlas-content
+    ```
