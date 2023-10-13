@@ -25,10 +25,10 @@ SET default_table_access_method = heap;
 CREATE ROLE bloqcat;
 --
 -- TOC entry 202 (class 1259 OID 16390)
--- Name: pattern; Type: TABLE; Schema: public; Owner: planqk
+-- Name: algorithm; Type: TABLE; Schema: public; Owner: planqk
 --
 
-CREATE TABLE public.pattern (
+CREATE TABLE public.algorithm (
     acronym character varying(255),
     algo_parameter text,
     assumptions character varying(255),
@@ -43,88 +43,88 @@ CREATE TABLE public.pattern (
 );
 
 
-ALTER TABLE public.pattern OWNER TO bloqcat;
+ALTER TABLE public.algorithm OWNER TO bloqcat;
 
 --
 -- TOC entry 203 (class 1259 OID 16398)
--- Name: pattern_application_area; Type: TABLE; Schema: public; Owner: planqk
+-- Name: algorithm_application_area; Type: TABLE; Schema: public; Owner: planqk
 --
 
-CREATE TABLE public.pattern_application_area (
-    pattern_id uuid NOT NULL,
+CREATE TABLE public.algorithm_application_area (
+    algorithm_id uuid NOT NULL,
     application_area_id uuid NOT NULL
 );
 
 
-ALTER TABLE public.pattern_application_area OWNER TO bloqcat;
+ALTER TABLE public.algorithm_application_area OWNER TO bloqcat;
 
 --
 -- TOC entry 204 (class 1259 OID 16403)
--- Name: pattern_problem_type; Type: TABLE; Schema: public; Owner: planqk
+-- Name: algorithm_problem_type; Type: TABLE; Schema: public; Owner: planqk
 --
 
-CREATE TABLE public.pattern_problem_type (
-    pattern_id uuid NOT NULL,
+CREATE TABLE public.algorithm_problem_type (
+    algorithm_id uuid NOT NULL,
     problem_type_id uuid NOT NULL
 );
 
 
-ALTER TABLE public.pattern_problem_type OWNER TO bloqcat;
+ALTER TABLE public.algorithm_problem_type OWNER TO bloqcat;
 
 --
 -- TOC entry 205 (class 1259 OID 16408)
--- Name: pattern_publication; Type: TABLE; Schema: public; Owner: planqk
+-- Name: algorithm_publication; Type: TABLE; Schema: public; Owner: planqk
 --
 
-CREATE TABLE public.pattern_publication (
-    pattern_id uuid NOT NULL,
+CREATE TABLE public.algorithm_publication (
+    algorithm_id uuid NOT NULL,
     publication_id uuid NOT NULL
 );
 
 
-ALTER TABLE public.pattern_publication OWNER TO bloqcat;
+ALTER TABLE public.algorithm_publication OWNER TO bloqcat;
 
 --
 -- TOC entry 207 (class 1259 OID 16418)
--- Name: pattern_relation; Type: TABLE; Schema: public; Owner: planqk
+-- Name: algorithm_relation; Type: TABLE; Schema: public; Owner: planqk
 --
 
-CREATE TABLE public.pattern_relation (
+CREATE TABLE public.algorithm_relation (
     id uuid NOT NULL,
     description character varying(255),
-    pattern_relation_type_id uuid,
-    source_pattern uuid,
-    target_pattern uuid
+    algorithm_relation_type_id uuid,
+    source_algorithm uuid,
+    target_algorithm uuid
 );
 
 
-ALTER TABLE public.pattern_relation OWNER TO bloqcat;
+ALTER TABLE public.algorithm_relation OWNER TO bloqcat;
 
 --
 -- TOC entry 208 (class 1259 OID 16423)
--- Name: pattern_relation_type; Type: TABLE; Schema: public; Owner: planqk
+-- Name: algorithm_relation_type; Type: TABLE; Schema: public; Owner: planqk
 --
 
-CREATE TABLE public.pattern_relation_type (
+CREATE TABLE public.algorithm_relation_type (
     id uuid NOT NULL,
     name character varying(255)
 );
 
 
-ALTER TABLE public.pattern_relation_type OWNER TO bloqcat;
+ALTER TABLE public.algorithm_relation_type OWNER TO bloqcat;
 
 --
 -- TOC entry 206 (class 1259 OID 16413)
--- Name: pattern_tag; Type: TABLE; Schema: public; Owner: planqk
+-- Name: algorithm_tag; Type: TABLE; Schema: public; Owner: planqk
 --
 
-CREATE TABLE public.pattern_tag (
-    pattern_id uuid NOT NULL,
+CREATE TABLE public.algorithm_tag (
+    algorithm_id uuid NOT NULL,
     tag_value character varying(255) NOT NULL
 );
 
 
-ALTER TABLE public.pattern_tag OWNER TO bloqcat;
+ALTER TABLE public.algorithm_tag OWNER TO bloqcat;
 
 --
 -- TOC entry 209 (class 1259 OID 16428)
@@ -141,15 +141,15 @@ ALTER TABLE public.application_area OWNER TO bloqcat;
 
 --
 -- TOC entry 210 (class 1259 OID 16433)
--- Name: classic_pattern; Type: TABLE; Schema: public; Owner: planqk
+-- Name: classic_algorithm; Type: TABLE; Schema: public; Owner: planqk
 --
 
-CREATE TABLE public.classic_pattern (
+CREATE TABLE public.classic_algorithm (
     id uuid NOT NULL
 );
 
 
-ALTER TABLE public.classic_pattern OWNER TO bloqcat;
+ALTER TABLE public.classic_algorithm OWNER TO bloqcat;
 
 --
 -- TOC entry 211 (class 1259 OID 16438)
@@ -158,7 +158,7 @@ ALTER TABLE public.classic_pattern OWNER TO bloqcat;
 
 CREATE TABLE public.classic_implementation (
     id uuid NOT NULL,
-    pattern_id uuid
+    algorithm_id uuid
 );
 
 
@@ -219,7 +219,7 @@ ALTER TABLE public.compute_resource OWNER TO bloqcat;
 CREATE TABLE public.compute_resource_property (
     id uuid NOT NULL,
     value character varying(255),
-    pattern_id uuid,
+    algorithm_id uuid,
     compute_resource_id uuid,
     compute_resource_property_type_id uuid,
     implementation_id uuid
@@ -311,7 +311,7 @@ CREATE TABLE public.implementation (
     problem_statement text,
     version character varying(255),
     id uuid NOT NULL,
-    implemented_pattern_id uuid
+    implemented_algorithm_id uuid
 );
 
 
@@ -372,32 +372,32 @@ ALTER TABLE public.knowledge_artifact OWNER TO bloqcat;
 
 --
 -- TOC entry 225 (class 1259 OID 16526)
--- Name: pattern_relation; Type: TABLE; Schema: public; Owner: planqk
+-- Name: algorithm_relation; Type: TABLE; Schema: public; Owner: planqk
 --
 
-CREATE TABLE public.pattern_relation (
+CREATE TABLE public.algorithm_relation (
     id uuid NOT NULL,
     description character varying(255),
-    pattern bytea,
-    pattern_id uuid,
-    pattern_relation_type_id uuid
+    algorithm bytea,
+    algorithm_id uuid,
+    algorithm_relation_type_id uuid
 );
 
 
-ALTER TABLE public.pattern_relation OWNER TO bloqcat;
+ALTER TABLE public.algorithm_relation OWNER TO bloqcat;
 
 --
 -- TOC entry 226 (class 1259 OID 16534)
--- Name: pattern_relation_type; Type: TABLE; Schema: public; Owner: planqk
+-- Name: algorithm_relation_type; Type: TABLE; Schema: public; Owner: planqk
 --
 
-CREATE TABLE public.pattern_relation_type (
+CREATE TABLE public.algorithm_relation_type (
     id uuid NOT NULL,
     name character varying(255)
 );
 
 
-ALTER TABLE public.pattern_relation_type OWNER TO bloqcat;
+ALTER TABLE public.algorithm_relation_type OWNER TO bloqcat;
 
 --
 -- TOC entry 227 (class 1259 OID 16539)
@@ -443,10 +443,10 @@ ALTER TABLE public.publication_authors OWNER TO bloqcat;
 
 --
 -- TOC entry 230 (class 1259 OID 16555)
--- Name: quantum_pattern; Type: TABLE; Schema: public; Owner: planqk
+-- Name: quantum_algorithm; Type: TABLE; Schema: public; Owner: planqk
 --
 
-CREATE TABLE public.quantum_pattern (
+CREATE TABLE public.quantum_algorithm (
     nisq_ready boolean NOT NULL,
     quantum_computation_model integer,
     speed_up character varying(255),
@@ -454,7 +454,7 @@ CREATE TABLE public.quantum_pattern (
 );
 
 
-ALTER TABLE public.quantum_pattern OWNER TO bloqcat;
+ALTER TABLE public.quantum_algorithm OWNER TO bloqcat;
 
 --
 -- TOC entry 231 (class 1259 OID 16560)
@@ -463,7 +463,7 @@ ALTER TABLE public.quantum_pattern OWNER TO bloqcat;
 
 CREATE TABLE public.quantum_implementation (
     id uuid NOT NULL,
-    pattern_id uuid
+    algorithm_id uuid
 );
 
 
@@ -478,7 +478,7 @@ CREATE TABLE public.sketch (
     description text,
     imageurl text,
     id uuid NOT NULL,
-    pattern_id uuid
+    algorithm_id uuid
 );
 
 
@@ -541,65 +541,65 @@ ALTER TABLE public.tag OWNER TO bloqcat;
 
 --
 -- TOC entry 2926 (class 2606 OID 16402)
--- Name: pattern_application_area pattern_application_area_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
+-- Name: algorithm_application_area algorithm_application_area_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
-ALTER TABLE ONLY public.pattern_application_area
-    ADD CONSTRAINT pattern_application_area_pkey PRIMARY KEY (pattern_id, application_area_id);
+ALTER TABLE ONLY public.algorithm_application_area
+    ADD CONSTRAINT algorithm_application_area_pkey PRIMARY KEY (algorithm_id, application_area_id);
 
 
 --
 -- TOC entry 2924 (class 2606 OID 16397)
--- Name: pattern pattern_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
+-- Name: algorithm algorithm_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
-ALTER TABLE ONLY public.pattern
-    ADD CONSTRAINT pattern_pkey PRIMARY KEY (id);
+ALTER TABLE ONLY public.algorithm
+    ADD CONSTRAINT algorithm_pkey PRIMARY KEY (id);
 
 
 --
 -- TOC entry 2928 (class 2606 OID 16407)
--- Name: pattern_problem_type pattern_problem_type_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
+-- Name: algorithm_problem_type algorithm_problem_type_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
-ALTER TABLE ONLY public.pattern_problem_type
-    ADD CONSTRAINT pattern_problem_type_pkey PRIMARY KEY (pattern_id, problem_type_id);
+ALTER TABLE ONLY public.algorithm_problem_type
+    ADD CONSTRAINT algorithm_problem_type_pkey PRIMARY KEY (algorithm_id, problem_type_id);
 
 
 --
 -- TOC entry 2930 (class 2606 OID 16412)
--- Name: pattern_publication pattern_publication_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
+-- Name: algorithm_publication algorithm_publication_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
-ALTER TABLE ONLY public.pattern_publication
-    ADD CONSTRAINT pattern_publication_pkey PRIMARY KEY (pattern_id, publication_id);
+ALTER TABLE ONLY public.algorithm_publication
+    ADD CONSTRAINT algorithm_publication_pkey PRIMARY KEY (algorithm_id, publication_id);
 
 
 --
 -- TOC entry 2934 (class 2606 OID 16422)
--- Name: pattern_relation pattern_relation_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
+-- Name: algorithm_relation algorithm_relation_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
-ALTER TABLE ONLY public.pattern_relation
-    ADD CONSTRAINT pattern_relation_pkey PRIMARY KEY (id);
+ALTER TABLE ONLY public.algorithm_relation
+    ADD CONSTRAINT algorithm_relation_pkey PRIMARY KEY (id);
 
 
 --
 -- TOC entry 2936 (class 2606 OID 16427)
--- Name: pattern_relation_type pattern_relation_type_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
+-- Name: algorithm_relation_type algorithm_relation_type_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
-ALTER TABLE ONLY public.pattern_relation_type
-    ADD CONSTRAINT pattern_relation_type_pkey PRIMARY KEY (id);
+ALTER TABLE ONLY public.algorithm_relation_type
+    ADD CONSTRAINT algorithm_relation_type_pkey PRIMARY KEY (id);
 
 
 --
 -- TOC entry 2932 (class 2606 OID 16417)
--- Name: pattern_tag pattern_tag_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
+-- Name: algorithm_tag algorithm_tag_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
-ALTER TABLE ONLY public.pattern_tag
-    ADD CONSTRAINT pattern_tag_pkey PRIMARY KEY (pattern_id, tag_value);
+ALTER TABLE ONLY public.algorithm_tag
+    ADD CONSTRAINT algorithm_tag_pkey PRIMARY KEY (algorithm_id, tag_value);
 
 
 --
@@ -613,11 +613,11 @@ ALTER TABLE ONLY public.application_area
 
 --
 -- TOC entry 2940 (class 2606 OID 16437)
--- Name: classic_pattern classic_pattern_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
+-- Name: classic_algorithm classic_algorithm_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
-ALTER TABLE ONLY public.classic_pattern
-    ADD CONSTRAINT classic_pattern_pkey PRIMARY KEY (id);
+ALTER TABLE ONLY public.classic_algorithm
+    ADD CONSTRAINT classic_algorithm_pkey PRIMARY KEY (id);
 
 
 --
@@ -748,20 +748,20 @@ ALTER TABLE ONLY public.knowledge_artifact
 
 --
 -- TOC entry 2970 (class 2606 OID 16533)
--- Name: pattern_relation pattern_relation_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
+-- Name: algorithm_relation algorithm_relation_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
-ALTER TABLE ONLY public.pattern_relation
-    ADD CONSTRAINT pattern_relation_pkey PRIMARY KEY (id);
+ALTER TABLE ONLY public.algorithm_relation
+    ADD CONSTRAINT algorithm_relation_pkey PRIMARY KEY (id);
 
 
 --
 -- TOC entry 2972 (class 2606 OID 16538)
--- Name: pattern_relation_type pattern_relation_type_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
+-- Name: algorithm_relation_type algorithm_relation_type_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
-ALTER TABLE ONLY public.pattern_relation_type
-    ADD CONSTRAINT pattern_relation_type_pkey PRIMARY KEY (id);
+ALTER TABLE ONLY public.algorithm_relation_type
+    ADD CONSTRAINT algorithm_relation_type_pkey PRIMARY KEY (id);
 
 
 --
@@ -784,11 +784,11 @@ ALTER TABLE ONLY public.publication
 
 --
 -- TOC entry 2978 (class 2606 OID 16559)
--- Name: quantum_pattern quantum_pattern_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
+-- Name: quantum_algorithm quantum_algorithm_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
-ALTER TABLE ONLY public.quantum_pattern
-    ADD CONSTRAINT quantum_pattern_pkey PRIMARY KEY (id);
+ALTER TABLE ONLY public.quantum_algorithm
+    ADD CONSTRAINT quantum_algorithm_pkey PRIMARY KEY (id);
 
 
 --
@@ -856,20 +856,20 @@ ALTER TABLE ONLY public.sketch
 
 --
 -- TOC entry 3027 (class 2606 OID 16779)
--- Name: pattern_relation fk2hap3a25ae7i3n1ir2srffhq9; Type: FK CONSTRAINT; Schema: public; Owner: planqk
+-- Name: algorithm_relation fk2hap3a25ae7i3n1ir2srffhq9; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
-ALTER TABLE ONLY public.pattern_relation
-    ADD CONSTRAINT fk2hap3a25ae7i3n1ir2srffhq9 FOREIGN KEY (pattern_relation_type_id) REFERENCES public.pattern_relation_type(id);
+ALTER TABLE ONLY public.algorithm_relation
+    ADD CONSTRAINT fk2hap3a25ae7i3n1ir2srffhq9 FOREIGN KEY (algorithm_relation_type_id) REFERENCES public.algorithm_relation_type(id);
 
 
 --
 -- TOC entry 2999 (class 2606 OID 16639)
--- Name: pattern_tag fk2k599458h8m62np4m75ukcvm0; Type: FK CONSTRAINT; Schema: public; Owner: planqk
+-- Name: algorithm_tag fk2k599458h8m62np4m75ukcvm0; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
-ALTER TABLE ONLY public.pattern_tag
-    ADD CONSTRAINT fk2k599458h8m62np4m75ukcvm0 FOREIGN KEY (pattern_id) REFERENCES public.pattern(id);
+ALTER TABLE ONLY public.algorithm_tag
+    ADD CONSTRAINT fk2k599458h8m62np4m75ukcvm0 FOREIGN KEY (algorithm_id) REFERENCES public.algorithm(id);
 
 
 --
@@ -914,7 +914,7 @@ ALTER TABLE ONLY public.compute_resource_property
 --
 
 ALTER TABLE ONLY public.classic_implementation
-    ADD CONSTRAINT fk3je79xy3m07m7de0rxt3pts8d FOREIGN KEY (pattern_id) REFERENCES public.classic_pattern(id);
+    ADD CONSTRAINT fk3je79xy3m07m7de0rxt3pts8d FOREIGN KEY (algorithm_id) REFERENCES public.classic_algorithm(id);
 
 
 --
@@ -928,37 +928,37 @@ ALTER TABLE ONLY public.implementation_tag
 
 --
 -- TOC entry 2993 (class 2606 OID 16609)
--- Name: pattern_application_area fk4kjef0upq0qftpafdd25l7t0c; Type: FK CONSTRAINT; Schema: public; Owner: planqk
+-- Name: algorithm_application_area fk4kjef0upq0qftpafdd25l7t0c; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
-ALTER TABLE ONLY public.pattern_application_area
-    ADD CONSTRAINT fk4kjef0upq0qftpafdd25l7t0c FOREIGN KEY (pattern_id) REFERENCES public.pattern(id);
+ALTER TABLE ONLY public.algorithm_application_area
+    ADD CONSTRAINT fk4kjef0upq0qftpafdd25l7t0c FOREIGN KEY (algorithm_id) REFERENCES public.algorithm(id);
 
 
 --
 -- TOC entry 2997 (class 2606 OID 16629)
--- Name: pattern_publication fk4ksdqnqv8lw1685grhv4kjywf; Type: FK CONSTRAINT; Schema: public; Owner: planqk
+-- Name: algorithm_publication fk4ksdqnqv8lw1685grhv4kjywf; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
-ALTER TABLE ONLY public.pattern_publication
-    ADD CONSTRAINT fk4ksdqnqv8lw1685grhv4kjywf FOREIGN KEY (pattern_id) REFERENCES public.pattern(id);
+ALTER TABLE ONLY public.algorithm_publication
+    ADD CONSTRAINT fk4ksdqnqv8lw1685grhv4kjywf FOREIGN KEY (algorithm_id) REFERENCES public.algorithm(id);
 
 
 --
 -- TOC entry 3002 (class 2606 OID 16654)
--- Name: pattern_relation fk5p53wf3j277a176t73ef3wuv2; Type: FK CONSTRAINT; Schema: public; Owner: planqk
+-- Name: algorithm_relation fk5p53wf3j277a176t73ef3wuv2; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
-ALTER TABLE ONLY public.pattern_relation
-    ADD CONSTRAINT fk5p53wf3j277a176t73ef3wuv2 FOREIGN KEY (target_pattern) REFERENCES public.pattern(id);
+ALTER TABLE ONLY public.algorithm_relation
+    ADD CONSTRAINT fk5p53wf3j277a176t73ef3wuv2 FOREIGN KEY (target_algorithm) REFERENCES public.algorithm(id);
 
 
 --
 -- TOC entry 2998 (class 2606 OID 16634)
--- Name: pattern_tag fk5skhq8p0k8aso9cl8cds8q3q1; Type: FK CONSTRAINT; Schema: public; Owner: planqk
+-- Name: algorithm_tag fk5skhq8p0k8aso9cl8cds8q3q1; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
-ALTER TABLE ONLY public.pattern_tag
+ALTER TABLE ONLY public.algorithm_tag
     ADD CONSTRAINT fk5skhq8p0k8aso9cl8cds8q3q1 FOREIGN KEY (tag_value) REFERENCES public.tag(value);
 
 
@@ -986,7 +986,7 @@ ALTER TABLE ONLY public.software_platforms_compute_resources
 --
 
 ALTER TABLE ONLY public.quantum_implementation
-    ADD CONSTRAINT fk793p84p7n3qh71le8iqyvchv9 FOREIGN KEY (pattern_id) REFERENCES public.quantum_pattern(id);
+    ADD CONSTRAINT fk793p84p7n3qh71le8iqyvchv9 FOREIGN KEY (algorithm_id) REFERENCES public.quantum_algorithm(id);
 
 
 --
@@ -1000,20 +1000,20 @@ ALTER TABLE ONLY public.discussion_comment
 
 --
 -- TOC entry 3026 (class 2606 OID 16774)
--- Name: pattern_relation fk9by0eabrmyinhakiirdy7finm; Type: FK CONSTRAINT; Schema: public; Owner: planqk
+-- Name: algorithm_relation fk9by0eabrmyinhakiirdy7finm; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
-ALTER TABLE ONLY public.pattern_relation
-    ADD CONSTRAINT fk9by0eabrmyinhakiirdy7finm FOREIGN KEY (pattern_id) REFERENCES public.pattern(id);
+ALTER TABLE ONLY public.algorithm_relation
+    ADD CONSTRAINT fk9by0eabrmyinhakiirdy7finm FOREIGN KEY (algorithm_id) REFERENCES public.algorithm(id);
 
 
 --
 -- TOC entry 3001 (class 2606 OID 16649)
--- Name: pattern_relation fk9cbjg9pmuosnnifvfqqnu77aa; Type: FK CONSTRAINT; Schema: public; Owner: planqk
+-- Name: algorithm_relation fk9cbjg9pmuosnnifvfqqnu77aa; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
-ALTER TABLE ONLY public.pattern_relation
-    ADD CONSTRAINT fk9cbjg9pmuosnnifvfqqnu77aa FOREIGN KEY (source_pattern) REFERENCES public.pattern(id);
+ALTER TABLE ONLY public.algorithm_relation
+    ADD CONSTRAINT fk9cbjg9pmuosnnifvfqqnu77aa FOREIGN KEY (source_algorithm) REFERENCES public.algorithm(id);
 
 
 --
@@ -1022,15 +1022,15 @@ ALTER TABLE ONLY public.pattern_relation
 --
 
 ALTER TABLE ONLY public.implementation
-    ADD CONSTRAINT fkahksfpw97e0c9jet3vu489ohb FOREIGN KEY (implemented_pattern_id) REFERENCES public.pattern(id);
+    ADD CONSTRAINT fkahksfpw97e0c9jet3vu489ohb FOREIGN KEY (implemented_algorithm_id) REFERENCES public.algorithm(id);
 
 
 --
 -- TOC entry 2994 (class 2606 OID 16614)
--- Name: pattern_problem_type fkbqoq02m0qsrxllbnb0d7k52vi; Type: FK CONSTRAINT; Schema: public; Owner: planqk
+-- Name: algorithm_problem_type fkbqoq02m0qsrxllbnb0d7k52vi; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
-ALTER TABLE ONLY public.pattern_problem_type
+ALTER TABLE ONLY public.algorithm_problem_type
     ADD CONSTRAINT fkbqoq02m0qsrxllbnb0d7k52vi FOREIGN KEY (problem_type_id) REFERENCES public.problem_type(id);
 
 
@@ -1045,11 +1045,11 @@ ALTER TABLE ONLY public.implementation_publication
 
 --
 -- TOC entry 2995 (class 2606 OID 16619)
--- Name: pattern_problem_type fkd383l41lvcuvooum4re1trytr; Type: FK CONSTRAINT; Schema: public; Owner: planqk
+-- Name: algorithm_problem_type fkd383l41lvcuvooum4re1trytr; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
-ALTER TABLE ONLY public.pattern_problem_type
-    ADD CONSTRAINT fkd383l41lvcuvooum4re1trytr FOREIGN KEY (pattern_id) REFERENCES public.pattern(id);
+ALTER TABLE ONLY public.algorithm_problem_type
+    ADD CONSTRAINT fkd383l41lvcuvooum4re1trytr FOREIGN KEY (algorithm_id) REFERENCES public.algorithm(id);
 
 
 --
@@ -1076,15 +1076,15 @@ ALTER TABLE ONLY public.discussion_topic
 --
 
 ALTER TABLE ONLY public.sketch
-    ADD CONSTRAINT fkehjal9c57gebep6lsrrfkbq61 FOREIGN KEY (pattern_id) REFERENCES public.pattern(id);
+    ADD CONSTRAINT fkehjal9c57gebep6lsrrfkbq61 FOREIGN KEY (algorithm_id) REFERENCES public.algorithm(id);
 
 
 --
 -- TOC entry 2996 (class 2606 OID 16624)
--- Name: pattern_publication fkeks3idqeo7ys2f6duiny918dr; Type: FK CONSTRAINT; Schema: public; Owner: planqk
+-- Name: algorithm_publication fkeks3idqeo7ys2f6duiny918dr; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
-ALTER TABLE ONLY public.pattern_publication
+ALTER TABLE ONLY public.algorithm_publication
     ADD CONSTRAINT fkeks3idqeo7ys2f6duiny918dr FOREIGN KEY (publication_id) REFERENCES public.publication(id);
 
 
@@ -1099,11 +1099,11 @@ ALTER TABLE ONLY public.implementation_software_platforms
 
 --
 -- TOC entry 3003 (class 2606 OID 16659)
--- Name: classic_pattern fkf8hl76cv1lapta56g1vjdyyow; Type: FK CONSTRAINT; Schema: public; Owner: planqk
+-- Name: classic_algorithm fkf8hl76cv1lapta56g1vjdyyow; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
-ALTER TABLE ONLY public.classic_pattern
-    ADD CONSTRAINT fkf8hl76cv1lapta56g1vjdyyow FOREIGN KEY (id) REFERENCES public.pattern(id);
+ALTER TABLE ONLY public.classic_algorithm
+    ADD CONSTRAINT fkf8hl76cv1lapta56g1vjdyyow FOREIGN KEY (id) REFERENCES public.algorithm(id);
 
 
 --
@@ -1126,10 +1126,10 @@ ALTER TABLE ONLY public.implementation_tag
 
 --
 -- TOC entry 2991 (class 2606 OID 16599)
--- Name: pattern fkh714p5lo5u77x1bc14s4g8b3t; Type: FK CONSTRAINT; Schema: public; Owner: planqk
+-- Name: algorithm fkh714p5lo5u77x1bc14s4g8b3t; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
-ALTER TABLE ONLY public.pattern
+ALTER TABLE ONLY public.algorithm
     ADD CONSTRAINT fkh714p5lo5u77x1bc14s4g8b3t FOREIGN KEY (id) REFERENCES public.knowledge_artifact(id);
 
 
@@ -1153,11 +1153,11 @@ ALTER TABLE ONLY public.compute_resource_property
 
 --
 -- TOC entry 3030 (class 2606 OID 16794)
--- Name: quantum_pattern fkksxr1gyvxadejxfhfrfkh5m1; Type: FK CONSTRAINT; Schema: public; Owner: planqk
+-- Name: quantum_algorithm fkksxr1gyvxadejxfhfrfkh5m1; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
-ALTER TABLE ONLY public.quantum_pattern
-    ADD CONSTRAINT fkksxr1gyvxadejxfhfrfkh5m1 FOREIGN KEY (id) REFERENCES public.pattern(id);
+ALTER TABLE ONLY public.quantum_algorithm
+    ADD CONSTRAINT fkksxr1gyvxadejxfhfrfkh5m1 FOREIGN KEY (id) REFERENCES public.algorithm(id);
 
 
 --
@@ -1202,7 +1202,7 @@ ALTER TABLE ONLY public.quantum_implementation
 --
 
 ALTER TABLE ONLY public.compute_resource_property
-    ADD CONSTRAINT fkmnnvywwb2eqox08q7x6nnyscf FOREIGN KEY (pattern_id) REFERENCES public.pattern(id);
+    ADD CONSTRAINT fkmnnvywwb2eqox08q7x6nnyscf FOREIGN KEY (algorithm_id) REFERENCES public.algorithm(id);
 
 
 --
@@ -1234,10 +1234,10 @@ ALTER TABLE ONLY public.cloud_services_compute_resources
 
 --
 -- TOC entry 2992 (class 2606 OID 16604)
--- Name: pattern_application_area fkr5g50nihf4cl2e6cwv4hfs1p; Type: FK CONSTRAINT; Schema: public; Owner: planqk
+-- Name: algorithm_application_area fkr5g50nihf4cl2e6cwv4hfs1p; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
-ALTER TABLE ONLY public.pattern_application_area
+ALTER TABLE ONLY public.algorithm_application_area
     ADD CONSTRAINT fkr5g50nihf4cl2e6cwv4hfs1p FOREIGN KEY (application_area_id) REFERENCES public.application_area(id);
 
 
@@ -1252,11 +1252,11 @@ ALTER TABLE ONLY public.image
 
 --
 -- TOC entry 3000 (class 2606 OID 16644)
--- Name: pattern_relation fksoc9d6qhee9xmia2o80adfymt; Type: FK CONSTRAINT; Schema: public; Owner: planqk
+-- Name: algorithm_relation fksoc9d6qhee9xmia2o80adfymt; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
-ALTER TABLE ONLY public.pattern_relation
-    ADD CONSTRAINT fksoc9d6qhee9xmia2o80adfymt FOREIGN KEY (pattern_relation_type_id) REFERENCES public.pattern_relation_type(id);
+ALTER TABLE ONLY public.algorithm_relation
+    ADD CONSTRAINT fksoc9d6qhee9xmia2o80adfymt FOREIGN KEY (algorithm_relation_type_id) REFERENCES public.algorithm_relation_type(id);
 
 
 --
