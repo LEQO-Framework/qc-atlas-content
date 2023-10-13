@@ -65,14 +65,14 @@ d_{ent} = (2n+1)m~,~d_{rot} = m+1
 \$\$', NULL, 1, '* quadratische $n\times n$ Matrix A (als Ausgangspunkt)
 * Gewünschte Anzahl von Verschränkungen $m$
 * $n(m+1)$ Drehwinkel
-* Anzahl klassischer Optimierungsschritte $k$', '>Der VQE algorithmus [[1]](https://arxiv.org/abs/1304.3061)[[2]](https://arxiv.org/abs/1304.3061) ist ein heuristischer hybrider Quanten-algorithmus, mit welchem der kleinste (oder größte) Eigenwert inklusive Eigenvektor einer (meist) großen Matrix sehr gut angenähert werden kann. Hierbei wird ein quantenmechanischer Zustand auf einem NISQ-Rechner auf Basis von vorgegebenen Parametern präpariert und in der computational basis ($|0\rangle$ und  $|1\rangle$) gemessen. Das Ergebnis kann durch eine Kosten-Funktion ein Wert zugeordnet werden, welchen es zu minimieren  (oder maximieren) gilt. Ein klassischer Optimierungsalgorithmus verändert auf Grundlage des Wertes der Kosten-Funktion die gegebenen Parameter, durch welche wiederum ein Zustand auf dem Quantencomputer vorbereitet wird. Durch geeignetes Vorgehen bei der Zustandspräparierung und der klassischen Optimierung können Speedups erreicht werden.', 'Variational Quantum Eigensolver', '* n-dimensionaler Vektor $|\psi_F\rangle$ (von zuletzt erhaltenen Optimierungsparametern abhängige Wellenfunktion)
+* Anzahl klassischer Optimierungsschritte $k$', '>Der VQE Algorithmus [[1]](https://arxiv.org/abs/1304.3061)[[2]](https://arxiv.org/abs/1304.3061) ist ein heuristischer hybrider Quanten-Algorithmus, mit welchem der kleinste (oder größte) Eigenwert inklusive Eigenvektor einer (meist) großen Matrix sehr gut angenähert werden kann. Hierbei wird ein quantenmechanischer Zustand auf einem NISQ-Rechner auf Basis von vorgegebenen Parametern präpariert und in der computational basis ($|0\rangle$ und  $|1\rangle$) gemessen. Das Ergebnis kann durch eine Kosten-Funktion ein Wert zugeordnet werden, welchen es zu minimieren  (oder maximieren) gilt. Ein klassischer Optimierungsalgorithmus verändert auf Grundlage des Wertes der Kosten-Funktion die gegebenen Parameter, durch welche wiederum ein Zustand auf dem Quantencomputer vorbereitet wird. Durch geeignetes Vorgehen bei der Zustandspräparierung und der klassischen Optimierung können Speedups erreicht werden.', 'Variational Quantum Eigensolver', '* n-dimensionaler Vektor $|\psi_F\rangle$ (von zuletzt erhaltenen Optimierungsparametern abhängige Wellenfunktion)
 * Skalarer Eigenwert durch Berechnung des Erwartungswertes $\langle\psi_F|A|\psi_F\rangle$', 'Viele wirtschaftlich relevante Fragestellungen der Neuzeit lassen sich als Optimierungsprobleme auffassen. So behandelt man beim Traveling-Salesman-Problem (TSP) die Aufgabe, eine Person zwischen verschiedenen Standorten mit gegebenen Distanzen möglichst effizient (z.B. möglichst schnell) reisen zu lassen. Solche und ähnliche Fragestellungen können als sogenanntes *Eigenwert-Problem* kodiert werden, in welchem bei gegebener Matrix $A$ Zahlen $\lambda_i$ und Vektoren $v_i$ gefunden werden sollen, sodass Folgendes gilt:
 \$\$
 Av_i = \lambda_iv_i
 \$\$
 Bei Optimierungsproblemen kann dies oft auf das Finden des größten bzw. kleinsten Eigenwertes und des dazugehörigen Eigenvektors beschränkt werden. Der Einsatz von variationellen Methoden wie dem VQE kann vor Allem bei quantenmechanischen Problemen, beispielsweise bei der Simulation von Molekülen in der Medikamentenforschung eingesetzt werden. [[3]](https://www.nature.com/articles/s41467-019-10988-2)
-Quantenmechanisch übersetzt, wird der VQE dafür genutzt, den Energie-Grundzustand (niedrigster Eigenwert) eines Hamiltonoperators (Matrix) zu berechnen, welcher das System beschreibt. In der folgenden Beschreibung des algorithmus'' wird auch auf die Mathematik und auf ein spezielles Vorgehen beim Präparierungsprozess eingegangen.', '## *Beschreibung des algorithmus*
-Der algorithmus besteht aus der häufigen Wiederholung der folgenden Schritte, wobei QC quantenmechanische und PC klassische Anteile des algorithmus beschreibt:
+Quantenmechanisch übersetzt, wird der VQE dafür genutzt, den Energie-Grundzustand (niedrigster Eigenwert) eines Hamiltonoperators (Matrix) zu berechnen, welcher das System beschreibt. In der folgenden Beschreibung des Algorithmus'' wird auch auf die Mathematik und auf ein spezielles Vorgehen beim Präparierungsprozess eingegangen.', '## *Beschreibung des Algorithmus*
+Der Algorithmus besteht aus der häufigen Wiederholung der folgenden Schritte, wobei QC quantenmechanische und PC klassische Anteile des Algorithmus beschreibt:
 1. Präparierung eines Zustandes auf Grundlage von (Anfangs-)Parametern (QC)
 2. Messung des Zustandes in der computational basis (QC)
 3. Berechnung des Energie-Erwartungswertes mit diesem Zustand (PC)
@@ -80,13 +80,13 @@ Der algorithmus besteht aus der häufigen Wiederholung der folgenden Schritte, w
 
 Auf Schritt 4 folgt wiederum Schritt 1 mit den neu erhaltenen Parametern.
 ### 1. Präparierung
-Schon der erste Schritt beinhaltet seine Tücken. Die Zustandspräparierung ist nämlich der wichtigste Teil, durch welchen Speedups des algorithmus'' gegenüber klassischer Alternativen erreicht werden könnten. In diesem Abschnitt wird eine sehr generische Zustandspräparierung behandelt, anhand derer das Konzept verdeutlicht werden soll. Die hier vorgestellte Zustandspräparierung von $n$ Qubits sieht wie folgt aus:
+Schon der erste Schritt beinhaltet seine Tücken. Die Zustandspräparierung ist nämlich der wichtigste Teil, durch welchen Speedups des Algorithmus'' gegenüber klassischer Alternativen erreicht werden könnten. In diesem Abschnitt wird eine sehr generische Zustandspräparierung behandelt, anhand derer das Konzept verdeutlicht werden soll. Die hier vorgestellte Zustandspräparierung von $n$ Qubits sieht wie folgt aus:
 
 \$\$
 |\psi\rangle = \big(U_\text{ent}U_\text{rot}(\vec{\theta})\big)^m|0\rangle^n
 \$\$
 
-Hierbei ist $U_\text{ent}$ ein Verschränkungsoperator, $U_\text{rot}$ ein Rotationsoperator und $m$ die (variable) Anzahl von (erneuten) Verschränkungen/Rotationen. Wie bei universellen Quantencomputern üblich, wird davon ausgegangen, dass die Qubits alle im Zustand $|0\rangle$ initialisiert werden können. Auf die einzelnen Bestandteile des algorithmus wird im Folgenden eingegangen.<br><br>
+Hierbei ist $U_\text{ent}$ ein Verschränkungsoperator, $U_\text{rot}$ ein Rotationsoperator und $m$ die (variable) Anzahl von (erneuten) Verschränkungen/Rotationen. Wie bei universellen Quantencomputern üblich, wird davon ausgegangen, dass die Qubits alle im Zustand $|0\rangle$ initialisiert werden können. Auf die einzelnen Bestandteile des Algorithmus wird im Folgenden eingegangen.<br><br>
 #### Verschränkung $U_{ent}$
 Quantencomputer haben unter anderem den Vorteil, dass durch Verschränkung ein hohe Anzahl parallel ausführbarer Operationen ermöglicht wird. Das wird auch hier bei der Zustandspräparierung ausgenutzt, bei welcher alle beteiligten Qubits miteinander verschränkt werden sollen. Formal ist die leichteste Form der Verschränkung zweier Qubits im $|0\rangle$-Zustand durch die Hintereinanderausführung eines Hadamard-Gatters auf das Control-Qubit und eines CNOT-Gatters zu realisieren:
 
@@ -124,7 +124,7 @@ Um die Verschränkung vollständig nutzen zu können, werden sowohl vor, als auc
 \end{quantikz}
 
 ### 2. - 4. Messung, Erwartungswertberechnung und Optimierung
-Die Messung des Zustandes erfolgt in der computational basis und hängt von der ausgewählten Optimierungsstrategie ab. Im Fall des Einsatzes von *simultaneous perturbation stochastic approximation* (SPSA) [[4]](https://arxiv.org/abs/1704.05018) werden für einen Optimierungsschritt der Parameter zwei Zustände und die dazugehörigen Erwartungswerte benötigt, weshalb für einen Durchlauf des algorithmus'' Schritt 1,2 und 3 zweimal ausgeführt werden müssen, bevor die eigentliche Optimierung stattfinden kann.
+Die Messung des Zustandes erfolgt in der computational basis und hängt von der ausgewählten Optimierungsstrategie ab. Im Fall des Einsatzes von *simultaneous perturbation stochastic approximation* (SPSA) [[4]](https://arxiv.org/abs/1704.05018) werden für einen Optimierungsschritt der Parameter zwei Zustände und die dazugehörigen Erwartungswerte benötigt, weshalb für einen Durchlauf des Algorithmus'' Schritt 1,2 und 3 zweimal ausgeführt werden müssen, bevor die eigentliche Optimierung stattfinden kann.
 Nach der gewünschten Anzahl der Iterationsschritte (für die klassische Optimierung) erhält man ein finales Set von Parametern $\theta_F$, welche für die Berechnung der finalen Wellenfunktion $|\psi_F\rangle$ genutzt wird. Diese ist dann (bei genügend Iterationsschritten und bei vernünftiger Berechnung) ein Eigenzustand/-vektor der Matrix $A$. Der dazugehörige (minimalste) Eigenwert berechnet sich durch den Erwartungswert $\lambda_{min}=\langle\psi_F|A|\psi_F\rangle$.
 
 ### Referenzen
@@ -192,7 +192,7 @@ INSERT INTO public.algorithm_problem_type (algorithm_id, problem_type_id) VALUES
 -- Data for Name: publication; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
-INSERT INTO public.publication (doi, title, url, id) VALUES ('10.1137/S0097539795293172', 'Polynomial-Time algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer', 'https://arxiv.org/abs/quant-ph/9508027', 'f05c9136-2f9f-433f-9c35-85009111ee3c');
+INSERT INTO public.publication (doi, title, url, id) VALUES ('10.1137/S0097539795293172', 'Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer', 'https://arxiv.org/abs/quant-ph/9508027', 'f05c9136-2f9f-433f-9c35-85009111ee3c');
 INSERT INTO public.publication (doi, title, url, id) VALUES ('10.1109/TSMCB.2008.925743', 'Quantum reinforcement learning', 'https://arxiv.org/abs/0810.3828', '87d697a4-6256-4f84-b545-c2024ab380c2');
 INSERT INTO public.publication (doi, title, url, id) VALUES ('10.1038/s41586-019-0980-2', 'Supervised learning with quantum enhanced feature spaces', 'https://arxiv.org/abs/1804.11326', '3aac6a37-10de-4a95-a2bd-381d357df2a4');
 INSERT INTO public.publication (doi, title, url, id) VALUES ('10.1016/j.cpc.2019.107006', 'Support vector machines on the D-Wave quantum annealer', 'https://arxiv.org/abs/1906.06283', 'ae6bdf6f-2656-45bd-9b96-0820eea3cdab');
@@ -234,9 +234,9 @@ INSERT INTO public.algorithm_publication (algorithm_id, publication_id) VALUES (
 --
 
 INSERT INTO public.tag (value, category) VALUES ('Phase Estimation', 'Subroutine');
-INSERT INTO public.tag (value, category) VALUES ('Reinforcement learning', 'algorithm class');
-INSERT INTO public.tag (value, category) VALUES ('Classification', 'algorithm class');
-INSERT INTO public.tag (value, category) VALUES ('Factorization', 'algorithm class');
+INSERT INTO public.tag (value, category) VALUES ('Reinforcement learning', 'Algorithm class');
+INSERT INTO public.tag (value, category) VALUES ('Classification', 'Algorithm class');
+INSERT INTO public.tag (value, category) VALUES ('Factorization', 'Algorithm class');
 
 
 --
@@ -438,7 +438,7 @@ INSERT INTO public.implementation_tag (implementation_id, tag_value) VALUES ('10
 --
 -- TOC entry 3200 (class 0 OID 16486)
 -- Dependencies: 227
--- Data for Name: algorithm_relation_type; Type: TABLE DATA; Schema: public; Owner: planqk
+-- Data for Name: pattern_relation_type; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
@@ -446,7 +446,7 @@ INSERT INTO public.implementation_tag (implementation_id, tag_value) VALUES ('10
 --
 -- TOC entry 3199 (class 0 OID 16480)
 -- Dependencies: 226
--- Data for Name: algorithm_relation; Type: TABLE DATA; Schema: public; Owner: planqk
+-- Data for Name: pattern_relation; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
