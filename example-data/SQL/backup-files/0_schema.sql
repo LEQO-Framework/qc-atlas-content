@@ -22,6 +22,8 @@ SET default_tablespace = '';
 
 SET default_table_access_method = heap;
 
+CREATE ROLE planqk;
+
 --
 -- TOC entry 202 (class 1259 OID 16390)
 -- Name: algorithm; Type: TABLE; Schema: public; Owner: planqk
