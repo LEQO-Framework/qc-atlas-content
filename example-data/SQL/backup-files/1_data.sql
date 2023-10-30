@@ -5,7 +5,7 @@
 -- Dumped from database version 12.5 (Debian 12.5-1.pgdg100+1)
 -- Dumped by pg_dump version 14.9 (Ubuntu 14.9-0ubuntu0.22.04.1)
 
--- Started on 2023-10-30 08:41:59 CET
+-- Started on 2023-10-30 10:06:05 CET
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -19,8 +19,8 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- TOC entry 3311 (class 0 OID 16479)
--- Dependencies: 224
+-- TOC entry 3328 (class 0 OID 16526)
+-- Dependencies: 234
 -- Data for Name: knowledge_artifact; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
@@ -28,19 +28,23 @@ INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALU
 INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('87d697a4-6256-4f84-b545-c2024ab380c2', NULL, NULL);
 INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('3aac6a37-10de-4a95-a2bd-381d357df2a4', NULL, NULL);
 INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('ae6bdf6f-2656-45bd-9b96-0820eea3cdab', NULL, NULL);
+INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('9829e814-a707-479f-80c7-8b49ffa543bc', NULL, NULL);
+INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('52ae7837-58e1-47b2-bda3-4134597ef138', NULL, NULL);
 
 
 --
--- TOC entry 3289 (class 0 OID 16392)
+-- TOC entry 3296 (class 0 OID 16392)
 -- Dependencies: 202
 -- Data for Name: algorithm; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
+INSERT INTO public.algorithm (acronym, algo_parameter, assumptions, computation_model, input_format, intent, name, output_format, problem, solution, id) VALUES (NULL, NULL, NULL, 1, NULL, NULL, 'Initialization', NULL, NULL, NULL, '9829e814-a707-479f-80c7-8b49ffa543bc');
+INSERT INTO public.algorithm (acronym, algo_parameter, assumptions, computation_model, input_format, intent, name, output_format, problem, solution, id) VALUES (NULL, NULL, NULL, 1, NULL, NULL, 'Uniform Superposition', NULL, NULL, NULL, '52ae7837-58e1-47b2-bda3-4134597ef138');
 
 
 --
--- TOC entry 3296 (class 0 OID 16416)
--- Dependencies: 209
+-- TOC entry 3305 (class 0 OID 16428)
+-- Dependencies: 211
 -- Data for Name: application_area; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
@@ -50,7 +54,7 @@ INSERT INTO public.application_area (id, name) VALUES ('da982d08-30a8-48f7-8db1-
 
 
 --
--- TOC entry 3290 (class 0 OID 16398)
+-- TOC entry 3297 (class 0 OID 16398)
 -- Dependencies: 203
 -- Data for Name: algorithm_application_area; Type: TABLE DATA; Schema: public; Owner: planqk
 --
@@ -58,24 +62,24 @@ INSERT INTO public.application_area (id, name) VALUES ('da982d08-30a8-48f7-8db1-
 
 
 --
--- TOC entry 3333 (class 0 OID 17601)
--- Dependencies: 246
+-- TOC entry 3330 (class 0 OID 16532)
+-- Dependencies: 236
 -- Data for Name: learning_method; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3324 (class 0 OID 17541)
--- Dependencies: 237
+-- TOC entry 3298 (class 0 OID 16401)
+-- Dependencies: 204
 -- Data for Name: algorithm_learning_method; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3314 (class 0 OID 16491)
--- Dependencies: 227
+-- TOC entry 3333 (class 0 OID 16544)
+-- Dependencies: 239
 -- Data for Name: problem_type; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
@@ -83,16 +87,16 @@ INSERT INTO public.problem_type (id, name, parent_problem_type) VALUES ('76d773b
 
 
 --
--- TOC entry 3291 (class 0 OID 16401)
--- Dependencies: 204
+-- TOC entry 3299 (class 0 OID 16404)
+-- Dependencies: 205
 -- Data for Name: algorithm_problem_type; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3315 (class 0 OID 16494)
--- Dependencies: 228
+-- TOC entry 3334 (class 0 OID 16547)
+-- Dependencies: 240
 -- Data for Name: publication; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
@@ -103,32 +107,32 @@ INSERT INTO public.publication (doi, title, url, id) VALUES ('10.1016/j.cpc.2019
 
 
 --
--- TOC entry 3292 (class 0 OID 16404)
--- Dependencies: 205
+-- TOC entry 3300 (class 0 OID 16407)
+-- Dependencies: 206
 -- Data for Name: algorithm_publication; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3294 (class 0 OID 16410)
--- Dependencies: 207
+-- TOC entry 3302 (class 0 OID 16413)
+-- Dependencies: 208
 -- Data for Name: algorithm_relation_type; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3293 (class 0 OID 16407)
--- Dependencies: 206
+-- TOC entry 3301 (class 0 OID 16410)
+-- Dependencies: 207
 -- Data for Name: algorithm_relation; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3336 (class 0 OID 17616)
--- Dependencies: 249
+-- TOC entry 3340 (class 0 OID 16568)
+-- Dependencies: 246
 -- Data for Name: revinfo; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
@@ -137,11 +141,13 @@ INSERT INTO public.revinfo (rev, revtstmp) VALUES (2, 1698650562578);
 INSERT INTO public.revinfo (rev, revtstmp) VALUES (3, 1698650570493);
 INSERT INTO public.revinfo (rev, revtstmp) VALUES (4, 1698650570501);
 INSERT INTO public.revinfo (rev, revtstmp) VALUES (5, 1698650570540);
+INSERT INTO public.revinfo (rev, revtstmp) VALUES (6, 1698656605831);
+INSERT INTO public.revinfo (rev, revtstmp) VALUES (7, 1698656617204);
 
 
 --
--- TOC entry 3332 (class 0 OID 17596)
--- Dependencies: 245
+-- TOC entry 3329 (class 0 OID 16529)
+-- Dependencies: 235
 -- Data for Name: knowledge_artifact_revisions; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
@@ -156,19 +162,23 @@ INSERT INTO public.knowledge_artifact_revisions (id, rev, revtype, creation_date
 INSERT INTO public.knowledge_artifact_revisions (id, rev, revtype, creation_date, last_modified_at) VALUES ('e7a33256-0ab4-4baa-a805-0296b97960d6', 4, 1, NULL, NULL);
 INSERT INTO public.knowledge_artifact_revisions (id, rev, revtype, creation_date, last_modified_at) VALUES ('7de45de7-aca2-4966-a5f9-8ef018688722', 5, 1, NULL, NULL);
 INSERT INTO public.knowledge_artifact_revisions (id, rev, revtype, creation_date, last_modified_at) VALUES ('8179d686-afa1-4f03-8ec9-95899002488a', 5, 1, NULL, NULL);
+INSERT INTO public.knowledge_artifact_revisions (id, rev, revtype, creation_date, last_modified_at) VALUES ('9829e814-a707-479f-80c7-8b49ffa543bc', 6, 0, NULL, NULL);
+INSERT INTO public.knowledge_artifact_revisions (id, rev, revtype, creation_date, last_modified_at) VALUES ('52ae7837-58e1-47b2-bda3-4134597ef138', 7, 0, NULL, NULL);
 
 
 --
--- TOC entry 3325 (class 0 OID 17546)
--- Dependencies: 238
+-- TOC entry 3303 (class 0 OID 16419)
+-- Dependencies: 209
 -- Data for Name: algorithm_revisions; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
+INSERT INTO public.algorithm_revisions (id, rev, acronym, algo_parameter, assumptions, computation_model, input_format, intent, name, output_format, problem, solution) VALUES ('9829e814-a707-479f-80c7-8b49ffa543bc', 6, NULL, NULL, NULL, 1, NULL, NULL, 'Initialization', NULL, NULL, NULL);
+INSERT INTO public.algorithm_revisions (id, rev, acronym, algo_parameter, assumptions, computation_model, input_format, intent, name, output_format, problem, solution) VALUES ('52ae7837-58e1-47b2-bda3-4134597ef138', 7, NULL, NULL, NULL, 1, NULL, NULL, 'Uniform Superposition', NULL, NULL, NULL);
 
 
 --
--- TOC entry 3323 (class 0 OID 16527)
--- Dependencies: 236
+-- TOC entry 3345 (class 0 OID 16589)
+-- Dependencies: 251
 -- Data for Name: tag; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
@@ -179,48 +189,48 @@ INSERT INTO public.tag (value, category) VALUES ('Factorization', 'Algorithm cla
 
 
 --
--- TOC entry 3295 (class 0 OID 16413)
--- Dependencies: 208
+-- TOC entry 3304 (class 0 OID 16425)
+-- Dependencies: 210
 -- Data for Name: algorithm_tag; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3297 (class 0 OID 16419)
--- Dependencies: 210
+-- TOC entry 3306 (class 0 OID 16431)
+-- Dependencies: 212
 -- Data for Name: classic_algorithm; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3326 (class 0 OID 17557)
--- Dependencies: 239
+-- TOC entry 3307 (class 0 OID 16434)
+-- Dependencies: 213
 -- Data for Name: classic_algorithm_revisions; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3307 (class 0 OID 16464)
--- Dependencies: 220
+-- TOC entry 3321 (class 0 OID 16496)
+-- Dependencies: 227
 -- Data for Name: implementation; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3298 (class 0 OID 16422)
--- Dependencies: 211
+-- TOC entry 3308 (class 0 OID 16437)
+-- Dependencies: 214
 -- Data for Name: classic_implementation; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3329 (class 0 OID 17575)
--- Dependencies: 242
+-- TOC entry 3325 (class 0 OID 16514)
+-- Dependencies: 231
 -- Data for Name: implementation_revisions; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
@@ -238,16 +248,16 @@ INSERT INTO public.implementation_revisions (id, rev, assumptions, contributors,
 
 
 --
--- TOC entry 3327 (class 0 OID 17562)
--- Dependencies: 240
+-- TOC entry 3309 (class 0 OID 16440)
+-- Dependencies: 215
 -- Data for Name: classic_implementation_revisions; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3299 (class 0 OID 16425)
--- Dependencies: 212
+-- TOC entry 3310 (class 0 OID 16443)
+-- Dependencies: 216
 -- Data for Name: cloud_service; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
@@ -256,8 +266,8 @@ INSERT INTO public.cloud_service (id, cost_model, description, name, provider, u
 
 
 --
--- TOC entry 3301 (class 0 OID 16434)
--- Dependencies: 214
+-- TOC entry 3312 (class 0 OID 16452)
+-- Dependencies: 218
 -- Data for Name: compute_resource; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
@@ -268,8 +278,8 @@ INSERT INTO public.compute_resource (dtype, id, name, quantum_computation_model,
 
 
 --
--- TOC entry 3300 (class 0 OID 16431)
--- Dependencies: 213
+-- TOC entry 3311 (class 0 OID 16449)
+-- Dependencies: 217
 -- Data for Name: cloud_services_compute_resources; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
@@ -280,8 +290,8 @@ INSERT INTO public.cloud_services_compute_resources (cloud_service_id, compute_r
 
 
 --
--- TOC entry 3303 (class 0 OID 16443)
--- Dependencies: 216
+-- TOC entry 3314 (class 0 OID 16461)
+-- Dependencies: 220
 -- Data for Name: compute_resource_property_type; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
@@ -291,8 +301,8 @@ INSERT INTO public.compute_resource_property_type (id, datatype, description, na
 
 
 --
--- TOC entry 3302 (class 0 OID 16440)
--- Dependencies: 215
+-- TOC entry 3313 (class 0 OID 16458)
+-- Dependencies: 219
 -- Data for Name: compute_resource_property; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
@@ -311,80 +321,88 @@ INSERT INTO public.compute_resource_property (id, value, algorithm_id, compute_r
 
 
 --
--- TOC entry 3340 (class 0 OID 17713)
--- Dependencies: 253
+-- TOC entry 3315 (class 0 OID 16467)
+-- Dependencies: 221
 -- Data for Name: concrete_solutions; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3305 (class 0 OID 16452)
--- Dependencies: 218
+-- TOC entry 3348 (class 0 OID 17719)
+-- Dependencies: 254
+-- Data for Name: concrete_solutions_revisions; Type: TABLE DATA; Schema: public; Owner: planqk
+--
+
+
+
+--
+-- TOC entry 3317 (class 0 OID 16476)
+-- Dependencies: 223
 -- Data for Name: discussion_topic; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3304 (class 0 OID 16449)
--- Dependencies: 217
+-- TOC entry 3316 (class 0 OID 16473)
+-- Dependencies: 222
 -- Data for Name: discussion_comment; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3328 (class 0 OID 17567)
--- Dependencies: 241
+-- TOC entry 3318 (class 0 OID 16482)
+-- Dependencies: 224
 -- Data for Name: file; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3319 (class 0 OID 16509)
--- Dependencies: 232
+-- TOC entry 3341 (class 0 OID 16571)
+-- Dependencies: 247
 -- Data for Name: sketch; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3306 (class 0 OID 16458)
--- Dependencies: 219
+-- TOC entry 3320 (class 0 OID 16490)
+-- Dependencies: 226
 -- Data for Name: image; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3330 (class 0 OID 17583)
--- Dependencies: 243
+-- TOC entry 3322 (class 0 OID 16502)
+-- Dependencies: 228
 -- Data for Name: implementation_package; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3331 (class 0 OID 17591)
--- Dependencies: 244
+-- TOC entry 3323 (class 0 OID 16508)
+-- Dependencies: 229
 -- Data for Name: implementation_package_file; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3308 (class 0 OID 16470)
--- Dependencies: 221
+-- TOC entry 3324 (class 0 OID 16511)
+-- Dependencies: 230
 -- Data for Name: implementation_publication; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3320 (class 0 OID 16515)
--- Dependencies: 233
+-- TOC entry 3342 (class 0 OID 16577)
+-- Dependencies: 248
 -- Data for Name: software_platform; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
@@ -393,40 +411,40 @@ INSERT INTO public.software_platform (id, licence, link, name, version) VALUES (
 
 
 --
--- TOC entry 3309 (class 0 OID 16473)
--- Dependencies: 222
+-- TOC entry 3326 (class 0 OID 16520)
+-- Dependencies: 232
 -- Data for Name: implementation_software_platforms; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3310 (class 0 OID 16476)
--- Dependencies: 223
+-- TOC entry 3327 (class 0 OID 16523)
+-- Dependencies: 233
 -- Data for Name: implementation_tag; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3313 (class 0 OID 16488)
--- Dependencies: 226
+-- TOC entry 3332 (class 0 OID 16541)
+-- Dependencies: 238
 -- Data for Name: pattern_relation_type; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3312 (class 0 OID 16482)
--- Dependencies: 225
+-- TOC entry 3331 (class 0 OID 16535)
+-- Dependencies: 237
 -- Data for Name: pattern_relation; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3316 (class 0 OID 16500)
--- Dependencies: 229
+-- TOC entry 3335 (class 0 OID 16553)
+-- Dependencies: 241
 -- Data for Name: publication_authors; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
@@ -449,79 +467,83 @@ INSERT INTO public.publication_authors (publication_id, authors) VALUES ('ae6bdf
 
 
 --
--- TOC entry 3317 (class 0 OID 16503)
--- Dependencies: 230
+-- TOC entry 3336 (class 0 OID 16556)
+-- Dependencies: 242
 -- Data for Name: quantum_algorithm; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
+INSERT INTO public.quantum_algorithm (nisq_ready, quantum_computation_model, speed_up, id) VALUES (false, 0, NULL, '9829e814-a707-479f-80c7-8b49ffa543bc');
+INSERT INTO public.quantum_algorithm (nisq_ready, quantum_computation_model, speed_up, id) VALUES (false, 0, NULL, '52ae7837-58e1-47b2-bda3-4134597ef138');
 
 
 --
--- TOC entry 3334 (class 0 OID 17606)
--- Dependencies: 247
+-- TOC entry 3337 (class 0 OID 16559)
+-- Dependencies: 243
 -- Data for Name: quantum_algorithm_revisions; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
+INSERT INTO public.quantum_algorithm_revisions (id, rev, nisq_ready, quantum_computation_model, speed_up) VALUES ('9829e814-a707-479f-80c7-8b49ffa543bc', 6, false, 0, NULL);
+INSERT INTO public.quantum_algorithm_revisions (id, rev, nisq_ready, quantum_computation_model, speed_up) VALUES ('52ae7837-58e1-47b2-bda3-4134597ef138', 7, false, 0, NULL);
 
 
 --
--- TOC entry 3318 (class 0 OID 16506)
--- Dependencies: 231
+-- TOC entry 3338 (class 0 OID 16562)
+-- Dependencies: 244
 -- Data for Name: quantum_implementation; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3335 (class 0 OID 17611)
--- Dependencies: 248
+-- TOC entry 3339 (class 0 OID 16565)
+-- Dependencies: 245
 -- Data for Name: quantum_implementation_revisions; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3321 (class 0 OID 16521)
--- Dependencies: 234
+-- TOC entry 3343 (class 0 OID 16583)
+-- Dependencies: 249
 -- Data for Name: software_platform_cloud_services; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3322 (class 0 OID 16524)
--- Dependencies: 235
+-- TOC entry 3344 (class 0 OID 16586)
+-- Dependencies: 250
 -- Data for Name: software_platforms_compute_resources; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3338 (class 0 OID 17629)
--- Dependencies: 251
+-- TOC entry 3346 (class 0 OID 16595)
+-- Dependencies: 252
 -- Data for Name: tosca_application; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3337 (class 0 OID 17621)
--- Dependencies: 250
+-- TOC entry 3347 (class 0 OID 16601)
+-- Dependencies: 253
 -- Data for Name: tosca_application_revisions; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3346 (class 0 OID 0)
--- Dependencies: 252
+-- TOC entry 3354 (class 0 OID 0)
+-- Dependencies: 225
 -- Name: hibernate_sequence; Type: SEQUENCE SET; Schema: public; Owner: planqk
 --
 
-SELECT pg_catalog.setval('public.hibernate_sequence', 5, true);
+SELECT pg_catalog.setval('public.hibernate_sequence', 7, true);
 
 
--- Completed on 2023-10-30 08:42:00 CET
+-- Completed on 2023-10-30 10:06:06 CET
 
 --
 -- PostgreSQL database dump complete
