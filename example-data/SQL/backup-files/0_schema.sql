@@ -5,7 +5,7 @@
 -- Dumped from database version 12.5 (Debian 12.5-1.pgdg100+1)
 -- Dumped by pg_dump version 14.9 (Ubuntu 14.9-0ubuntu0.22.04.1)
 
--- Started on 2023-10-30 14:43:48 CET
+-- Started on 2023-10-31 13:41:53 CET
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -1904,7 +1904,7 @@ ALTER TABLE ONLY public.concrete_solution
     ADD CONSTRAINT ref_to_knowledge_artifact_fkey FOREIGN KEY (id) REFERENCES public.knowledge_artifact(id);
 
 
--- Completed on 2023-10-30 14:43:48 CET
+-- Completed on 2023-10-31 13:41:54 CET
 
 --
 -- PostgreSQL database dump complete
