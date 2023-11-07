@@ -2,10 +2,10 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 12.5 (Debian 12.5-1.pgdg100+1)
--- Dumped by pg_dump version 14.9 (Ubuntu 14.9-0ubuntu0.22.04.1)
+-- Dumped from database version 12.2 (Debian 12.2-2.pgdg100+1)
+-- Dumped by pg_dump version 12.4 (Ubuntu 12.4-1.pgdg18.04+1)
 
--- Started on 2023-11-01 13:15:31 CET
+-- Started on 2020-10-02 12:52:42 CEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -23,7 +23,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- TOC entry 202 (class 1259 OID 16392)
+-- TOC entry 202 (class 1259 OID 16390)
 -- Name: algorithm; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -58,20 +58,7 @@ CREATE TABLE public.algorithm_application_area (
 ALTER TABLE public.algorithm_application_area OWNER TO planqk;
 
 --
--- TOC entry 204 (class 1259 OID 16401)
--- Name: algorithm_learning_method; Type: TABLE; Schema: public; Owner: planqk
---
-
-CREATE TABLE public.algorithm_learning_method (
-    algorithm_id uuid NOT NULL,
-    learning_method_id uuid NOT NULL
-);
-
-
-ALTER TABLE public.algorithm_learning_method OWNER TO planqk;
-
---
--- TOC entry 205 (class 1259 OID 16404)
+-- TOC entry 204 (class 1259 OID 16403)
 -- Name: algorithm_problem_type; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -84,7 +71,7 @@ CREATE TABLE public.algorithm_problem_type (
 ALTER TABLE public.algorithm_problem_type OWNER TO planqk;
 
 --
--- TOC entry 206 (class 1259 OID 16407)
+-- TOC entry 205 (class 1259 OID 16408)
 -- Name: algorithm_publication; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -97,7 +84,7 @@ CREATE TABLE public.algorithm_publication (
 ALTER TABLE public.algorithm_publication OWNER TO planqk;
 
 --
--- TOC entry 207 (class 1259 OID 16410)
+-- TOC entry 207 (class 1259 OID 16418)
 -- Name: algorithm_relation; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -113,44 +100,20 @@ CREATE TABLE public.algorithm_relation (
 ALTER TABLE public.algorithm_relation OWNER TO planqk;
 
 --
--- TOC entry 208 (class 1259 OID 16413)
+-- TOC entry 208 (class 1259 OID 16423)
 -- Name: algorithm_relation_type; Type: TABLE; Schema: public; Owner: planqk
 --
 
 CREATE TABLE public.algorithm_relation_type (
     id uuid NOT NULL,
-    name character varying(255),
-    inverse_type_name character varying(255)
+    name character varying(255)
 );
 
 
 ALTER TABLE public.algorithm_relation_type OWNER TO planqk;
 
 --
--- TOC entry 209 (class 1259 OID 16419)
--- Name: algorithm_revisions; Type: TABLE; Schema: public; Owner: planqk
---
-
-CREATE TABLE public.algorithm_revisions (
-    id uuid NOT NULL,
-    rev integer NOT NULL,
-    acronym character varying(255),
-    algo_parameter text,
-    assumptions character varying(255),
-    computation_model integer,
-    input_format text,
-    intent text,
-    name character varying(255),
-    output_format text,
-    problem text,
-    solution text
-);
-
-
-ALTER TABLE public.algorithm_revisions OWNER TO planqk;
-
---
--- TOC entry 210 (class 1259 OID 16425)
+-- TOC entry 206 (class 1259 OID 16413)
 -- Name: algorithm_tag; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -163,7 +126,7 @@ CREATE TABLE public.algorithm_tag (
 ALTER TABLE public.algorithm_tag OWNER TO planqk;
 
 --
--- TOC entry 211 (class 1259 OID 16428)
+-- TOC entry 209 (class 1259 OID 16428)
 -- Name: application_area; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -176,7 +139,7 @@ CREATE TABLE public.application_area (
 ALTER TABLE public.application_area OWNER TO planqk;
 
 --
--- TOC entry 212 (class 1259 OID 16431)
+-- TOC entry 210 (class 1259 OID 16433)
 -- Name: classic_algorithm; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -188,20 +151,7 @@ CREATE TABLE public.classic_algorithm (
 ALTER TABLE public.classic_algorithm OWNER TO planqk;
 
 --
--- TOC entry 213 (class 1259 OID 16434)
--- Name: classic_algorithm_revisions; Type: TABLE; Schema: public; Owner: planqk
---
-
-CREATE TABLE public.classic_algorithm_revisions (
-    id uuid NOT NULL,
-    rev integer NOT NULL
-);
-
-
-ALTER TABLE public.classic_algorithm_revisions OWNER TO planqk;
-
---
--- TOC entry 214 (class 1259 OID 16437)
+-- TOC entry 211 (class 1259 OID 16438)
 -- Name: classic_implementation; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -214,21 +164,7 @@ CREATE TABLE public.classic_implementation (
 ALTER TABLE public.classic_implementation OWNER TO planqk;
 
 --
--- TOC entry 215 (class 1259 OID 16440)
--- Name: classic_implementation_revisions; Type: TABLE; Schema: public; Owner: planqk
---
-
-CREATE TABLE public.classic_implementation_revisions (
-    id uuid NOT NULL,
-    rev integer NOT NULL,
-    algorithm_id uuid
-);
-
-
-ALTER TABLE public.classic_implementation_revisions OWNER TO planqk;
-
---
--- TOC entry 216 (class 1259 OID 16443)
+-- TOC entry 213 (class 1259 OID 16448)
 -- Name: cloud_service; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -245,7 +181,7 @@ CREATE TABLE public.cloud_service (
 ALTER TABLE public.cloud_service OWNER TO planqk;
 
 --
--- TOC entry 217 (class 1259 OID 16449)
+-- TOC entry 212 (class 1259 OID 16443)
 -- Name: cloud_services_compute_resources; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -258,7 +194,7 @@ CREATE TABLE public.cloud_services_compute_resources (
 ALTER TABLE public.cloud_services_compute_resources OWNER TO planqk;
 
 --
--- TOC entry 218 (class 1259 OID 16452)
+-- TOC entry 214 (class 1259 OID 16456)
 -- Name: compute_resource; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -268,15 +204,14 @@ CREATE TABLE public.compute_resource (
     name character varying(255),
     quantum_computation_model integer,
     technology character varying(255),
-    vendor character varying(255),
-    qprov_origin boolean
+    vendor character varying(255)
 );
 
 
 ALTER TABLE public.compute_resource OWNER TO planqk;
 
 --
--- TOC entry 219 (class 1259 OID 16458)
+-- TOC entry 215 (class 1259 OID 16464)
 -- Name: compute_resource_property; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -293,7 +228,7 @@ CREATE TABLE public.compute_resource_property (
 ALTER TABLE public.compute_resource_property OWNER TO planqk;
 
 --
--- TOC entry 220 (class 1259 OID 16461)
+-- TOC entry 216 (class 1259 OID 16469)
 -- Name: compute_resource_property_type; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -308,42 +243,7 @@ CREATE TABLE public.compute_resource_property_type (
 ALTER TABLE public.compute_resource_property_type OWNER TO planqk;
 
 --
--- TOC entry 221 (class 1259 OID 16467)
--- Name: concrete_solution; Type: TABLE; Schema: public; Owner: planqk
---
-
-CREATE TABLE public.concrete_solution (
-    file_content text,
-    file_name character varying(255),
-    url character varying(255),
-    version character varying(255),
-    id uuid NOT NULL,
-    implemented_algorithm_id uuid
-);
-
-
-ALTER TABLE public.concrete_solution OWNER TO planqk;
-
---
--- TOC entry 222 (class 1259 OID 16473)
--- Name: concrete_solution_revisions; Type: TABLE; Schema: public; Owner: planqk
---
-
-CREATE TABLE public.concrete_solution_revisions (
-    id uuid NOT NULL,
-    rev integer NOT NULL,
-    file_content text,
-    file_name character varying(255),
-    url character varying(255),
-    version character varying(255),
-    implemented_algorithm_id uuid
-);
-
-
-ALTER TABLE public.concrete_solution_revisions OWNER TO planqk;
-
---
--- TOC entry 223 (class 1259 OID 16479)
+-- TOC entry 217 (class 1259 OID 16477)
 -- Name: discussion_comment; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -359,7 +259,7 @@ CREATE TABLE public.discussion_comment (
 ALTER TABLE public.discussion_comment OWNER TO planqk;
 
 --
--- TOC entry 224 (class 1259 OID 16482)
+-- TOC entry 218 (class 1259 OID 16482)
 -- Name: discussion_topic; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -376,37 +276,7 @@ CREATE TABLE public.discussion_topic (
 ALTER TABLE public.discussion_topic OWNER TO planqk;
 
 --
--- TOC entry 225 (class 1259 OID 16488)
--- Name: file; Type: TABLE; Schema: public; Owner: planqk
---
-
-CREATE TABLE public.file (
-    fileurl character varying(255),
-    mime_type character varying(255),
-    name character varying(255),
-    id uuid NOT NULL
-);
-
-
-ALTER TABLE public.file OWNER TO planqk;
-
---
--- TOC entry 226 (class 1259 OID 16494)
--- Name: hibernate_sequence; Type: SEQUENCE; Schema: public; Owner: planqk
---
-
-CREATE SEQUENCE public.hibernate_sequence
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.hibernate_sequence OWNER TO planqk;
-
---
--- TOC entry 227 (class 1259 OID 16496)
+-- TOC entry 219 (class 1259 OID 16490)
 -- Name: image; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -421,7 +291,7 @@ CREATE TABLE public.image (
 ALTER TABLE public.image OWNER TO planqk;
 
 --
--- TOC entry 228 (class 1259 OID 16502)
+-- TOC entry 220 (class 1259 OID 16498)
 -- Name: implementation; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -447,37 +317,7 @@ CREATE TABLE public.implementation (
 ALTER TABLE public.implementation OWNER TO planqk;
 
 --
--- TOC entry 229 (class 1259 OID 16508)
--- Name: implementation_package; Type: TABLE; Schema: public; Owner: planqk
---
-
-CREATE TABLE public.implementation_package (
-    dtype character varying(31) NOT NULL,
-    id uuid NOT NULL,
-    description character varying(255),
-    name character varying(255),
-    package_type integer,
-    implementation_id uuid
-);
-
-
-ALTER TABLE public.implementation_package OWNER TO planqk;
-
---
--- TOC entry 230 (class 1259 OID 16514)
--- Name: implementation_package_file; Type: TABLE; Schema: public; Owner: planqk
---
-
-CREATE TABLE public.implementation_package_file (
-    file_id uuid,
-    implementation_package_id uuid NOT NULL
-);
-
-
-ALTER TABLE public.implementation_package_file OWNER TO planqk;
-
---
--- TOC entry 231 (class 1259 OID 16517)
+-- TOC entry 221 (class 1259 OID 16506)
 -- Name: implementation_publication; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -490,33 +330,7 @@ CREATE TABLE public.implementation_publication (
 ALTER TABLE public.implementation_publication OWNER TO planqk;
 
 --
--- TOC entry 232 (class 1259 OID 16520)
--- Name: implementation_revisions; Type: TABLE; Schema: public; Owner: planqk
---
-
-CREATE TABLE public.implementation_revisions (
-    id uuid NOT NULL,
-    rev integer NOT NULL,
-    assumptions character varying(255),
-    contributors character varying(255),
-    dependencies character varying(255),
-    description text,
-    input_format text,
-    license character varying(255),
-    name character varying(255),
-    output_format text,
-    parameter character varying(255),
-    problem_statement text,
-    technology character varying(255),
-    version character varying(255),
-    implemented_algorithm_id uuid
-);
-
-
-ALTER TABLE public.implementation_revisions OWNER TO planqk;
-
---
--- TOC entry 233 (class 1259 OID 16526)
+-- TOC entry 222 (class 1259 OID 16511)
 -- Name: implementation_software_platforms; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -529,7 +343,7 @@ CREATE TABLE public.implementation_software_platforms (
 ALTER TABLE public.implementation_software_platforms OWNER TO planqk;
 
 --
--- TOC entry 234 (class 1259 OID 16529)
+-- TOC entry 223 (class 1259 OID 16516)
 -- Name: implementation_tag; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -542,7 +356,7 @@ CREATE TABLE public.implementation_tag (
 ALTER TABLE public.implementation_tag OWNER TO planqk;
 
 --
--- TOC entry 235 (class 1259 OID 16532)
+-- TOC entry 224 (class 1259 OID 16521)
 -- Name: knowledge_artifact; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -556,64 +370,7 @@ CREATE TABLE public.knowledge_artifact (
 ALTER TABLE public.knowledge_artifact OWNER TO planqk;
 
 --
--- TOC entry 236 (class 1259 OID 16535)
--- Name: knowledge_artifact_revisions; Type: TABLE; Schema: public; Owner: planqk
---
-
-CREATE TABLE public.knowledge_artifact_revisions (
-    id uuid NOT NULL,
-    rev integer NOT NULL,
-    revtype smallint,
-    creation_date timestamp without time zone,
-    last_modified_at timestamp without time zone
-);
-
-
-ALTER TABLE public.knowledge_artifact_revisions OWNER TO planqk;
-
---
--- TOC entry 237 (class 1259 OID 16538)
--- Name: learning_method; Type: TABLE; Schema: public; Owner: planqk
---
-
-CREATE TABLE public.learning_method (
-    id uuid NOT NULL,
-    name character varying(255)
-);
-
-
-ALTER TABLE public.learning_method OWNER TO planqk;
-
---
--- TOC entry 255 (class 1259 OID 25925)
--- Name: pattern; Type: TABLE; Schema: public; Owner: planqk
---
-
-CREATE TABLE public.pattern (
-    id uuid NOT NULL,
-    name character varying(255) NOT NULL,
-    uri character varying(255) NOT NULL,
-    content jsonb NOT NULL,
-    icon_url character varying(255),
-    rendered_content jsonb,
-    pattern_language_id uuid,
-    paper_ref character varying(255)
-);
-
-
-ALTER TABLE public.pattern OWNER TO planqk;
-
---
--- TOC entry 3311 (class 0 OID 0)
--- Dependencies: 255
--- Name: TABLE pattern; Type: COMMENT; Schema: public; Owner: planqk
---
-
-COMMENT ON TABLE public.pattern IS 'Buffer Table to copy the patterns from the PatternAtlas DB to it then import the data to the algorithm table';
-
-
---
--- TOC entry 238 (class 1259 OID 16541)
+-- TOC entry 225 (class 1259 OID 16526)
 -- Name: pattern_relation; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -629,7 +386,7 @@ CREATE TABLE public.pattern_relation (
 ALTER TABLE public.pattern_relation OWNER TO planqk;
 
 --
--- TOC entry 239 (class 1259 OID 16547)
+-- TOC entry 226 (class 1259 OID 16534)
 -- Name: pattern_relation_type; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -642,7 +399,7 @@ CREATE TABLE public.pattern_relation_type (
 ALTER TABLE public.pattern_relation_type OWNER TO planqk;
 
 --
--- TOC entry 240 (class 1259 OID 16550)
+-- TOC entry 227 (class 1259 OID 16539)
 -- Name: problem_type; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -656,7 +413,7 @@ CREATE TABLE public.problem_type (
 ALTER TABLE public.problem_type OWNER TO planqk;
 
 --
--- TOC entry 241 (class 1259 OID 16553)
+-- TOC entry 228 (class 1259 OID 16544)
 -- Name: publication; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -671,7 +428,7 @@ CREATE TABLE public.publication (
 ALTER TABLE public.publication OWNER TO planqk;
 
 --
--- TOC entry 242 (class 1259 OID 16559)
+-- TOC entry 229 (class 1259 OID 16552)
 -- Name: publication_authors; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -684,7 +441,7 @@ CREATE TABLE public.publication_authors (
 ALTER TABLE public.publication_authors OWNER TO planqk;
 
 --
--- TOC entry 243 (class 1259 OID 16562)
+-- TOC entry 230 (class 1259 OID 16555)
 -- Name: quantum_algorithm; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -699,23 +456,7 @@ CREATE TABLE public.quantum_algorithm (
 ALTER TABLE public.quantum_algorithm OWNER TO planqk;
 
 --
--- TOC entry 244 (class 1259 OID 16565)
--- Name: quantum_algorithm_revisions; Type: TABLE; Schema: public; Owner: planqk
---
-
-CREATE TABLE public.quantum_algorithm_revisions (
-    id uuid NOT NULL,
-    rev integer NOT NULL,
-    nisq_ready boolean,
-    quantum_computation_model integer,
-    speed_up character varying(255)
-);
-
-
-ALTER TABLE public.quantum_algorithm_revisions OWNER TO planqk;
-
---
--- TOC entry 245 (class 1259 OID 16568)
+-- TOC entry 231 (class 1259 OID 16560)
 -- Name: quantum_implementation; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -728,34 +469,7 @@ CREATE TABLE public.quantum_implementation (
 ALTER TABLE public.quantum_implementation OWNER TO planqk;
 
 --
--- TOC entry 246 (class 1259 OID 16571)
--- Name: quantum_implementation_revisions; Type: TABLE; Schema: public; Owner: planqk
---
-
-CREATE TABLE public.quantum_implementation_revisions (
-    id uuid NOT NULL,
-    rev integer NOT NULL,
-    algorithm_id uuid
-);
-
-
-ALTER TABLE public.quantum_implementation_revisions OWNER TO planqk;
-
---
--- TOC entry 247 (class 1259 OID 16574)
--- Name: revinfo; Type: TABLE; Schema: public; Owner: planqk
---
-
-CREATE TABLE public.revinfo (
-    rev integer NOT NULL,
-    revtstmp bigint
-);
-
-
-ALTER TABLE public.revinfo OWNER TO planqk;
-
---
--- TOC entry 248 (class 1259 OID 16577)
+-- TOC entry 232 (class 1259 OID 16565)
 -- Name: sketch; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -770,7 +484,7 @@ CREATE TABLE public.sketch (
 ALTER TABLE public.sketch OWNER TO planqk;
 
 --
--- TOC entry 249 (class 1259 OID 16583)
+-- TOC entry 235 (class 1259 OID 16583)
 -- Name: software_platform; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -786,7 +500,7 @@ CREATE TABLE public.software_platform (
 ALTER TABLE public.software_platform OWNER TO planqk;
 
 --
--- TOC entry 250 (class 1259 OID 16589)
+-- TOC entry 233 (class 1259 OID 16573)
 -- Name: software_platform_cloud_services; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -799,7 +513,7 @@ CREATE TABLE public.software_platform_cloud_services (
 ALTER TABLE public.software_platform_cloud_services OWNER TO planqk;
 
 --
--- TOC entry 251 (class 1259 OID 16592)
+-- TOC entry 234 (class 1259 OID 16578)
 -- Name: software_platforms_compute_resources; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -812,7 +526,7 @@ CREATE TABLE public.software_platforms_compute_resources (
 ALTER TABLE public.software_platforms_compute_resources OWNER TO planqk;
 
 --
--- TOC entry 252 (class 1259 OID 16595)
+-- TOC entry 236 (class 1259 OID 16591)
 -- Name: tag; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -825,53 +539,7 @@ CREATE TABLE public.tag (
 ALTER TABLE public.tag OWNER TO planqk;
 
 --
--- TOC entry 253 (class 1259 OID 16601)
--- Name: tosca_application; Type: TABLE; Schema: public; Owner: planqk
---
-
-CREATE TABLE public.tosca_application (
-    id uuid NOT NULL,
-    created_at timestamp without time zone,
-    created_by character varying(255),
-    importid uuid,
-    modified_at timestamp without time zone,
-    modified_by character varying(255),
-    name character varying(255),
-    toscaid character varying(255),
-    tosca_name character varying(255),
-    tosca_namespace character varying(255),
-    winery_location character varying(255)
-);
-
-
-ALTER TABLE public.tosca_application OWNER TO planqk;
-
---
--- TOC entry 254 (class 1259 OID 16607)
--- Name: tosca_application_revisions; Type: TABLE; Schema: public; Owner: planqk
---
-
-CREATE TABLE public.tosca_application_revisions (
-    id uuid NOT NULL,
-    rev integer NOT NULL,
-    revtype smallint,
-    created_at timestamp without time zone,
-    created_by character varying(255),
-    importid uuid,
-    modified_at timestamp without time zone,
-    modified_by character varying(255),
-    name character varying(255),
-    toscaid character varying(255),
-    tosca_name character varying(255),
-    tosca_namespace character varying(255),
-    winery_location character varying(255)
-);
-
-
-ALTER TABLE public.tosca_application_revisions OWNER TO planqk;
-
---
--- TOC entry 3010 (class 2606 OID 16614)
+-- TOC entry 2926 (class 2606 OID 16402)
 -- Name: algorithm_application_area algorithm_application_area_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -880,16 +548,7 @@ ALTER TABLE ONLY public.algorithm_application_area
 
 
 --
--- TOC entry 3012 (class 2606 OID 16616)
--- Name: algorithm_learning_method algorithm_learning_method_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.algorithm_learning_method
-    ADD CONSTRAINT algorithm_learning_method_pkey PRIMARY KEY (algorithm_id, learning_method_id);
-
-
---
--- TOC entry 3008 (class 2606 OID 16618)
+-- TOC entry 2924 (class 2606 OID 16397)
 -- Name: algorithm algorithm_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -898,7 +557,7 @@ ALTER TABLE ONLY public.algorithm
 
 
 --
--- TOC entry 3014 (class 2606 OID 16620)
+-- TOC entry 2928 (class 2606 OID 16407)
 -- Name: algorithm_problem_type algorithm_problem_type_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -907,7 +566,7 @@ ALTER TABLE ONLY public.algorithm_problem_type
 
 
 --
--- TOC entry 3016 (class 2606 OID 16622)
+-- TOC entry 2930 (class 2606 OID 16412)
 -- Name: algorithm_publication algorithm_publication_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -916,7 +575,7 @@ ALTER TABLE ONLY public.algorithm_publication
 
 
 --
--- TOC entry 3018 (class 2606 OID 16624)
+-- TOC entry 2934 (class 2606 OID 16422)
 -- Name: algorithm_relation algorithm_relation_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -925,7 +584,7 @@ ALTER TABLE ONLY public.algorithm_relation
 
 
 --
--- TOC entry 3020 (class 2606 OID 16626)
+-- TOC entry 2936 (class 2606 OID 16427)
 -- Name: algorithm_relation_type algorithm_relation_type_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -934,16 +593,7 @@ ALTER TABLE ONLY public.algorithm_relation_type
 
 
 --
--- TOC entry 3022 (class 2606 OID 16628)
--- Name: algorithm_revisions algorithm_revisions_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.algorithm_revisions
-    ADD CONSTRAINT algorithm_revisions_pkey PRIMARY KEY (id, rev);
-
-
---
--- TOC entry 3024 (class 2606 OID 16630)
+-- TOC entry 2932 (class 2606 OID 16417)
 -- Name: algorithm_tag algorithm_tag_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -952,7 +602,7 @@ ALTER TABLE ONLY public.algorithm_tag
 
 
 --
--- TOC entry 3026 (class 2606 OID 16632)
+-- TOC entry 2938 (class 2606 OID 16432)
 -- Name: application_area application_area_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -961,7 +611,7 @@ ALTER TABLE ONLY public.application_area
 
 
 --
--- TOC entry 3028 (class 2606 OID 16634)
+-- TOC entry 2940 (class 2606 OID 16437)
 -- Name: classic_algorithm classic_algorithm_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -970,16 +620,7 @@ ALTER TABLE ONLY public.classic_algorithm
 
 
 --
--- TOC entry 3030 (class 2606 OID 16636)
--- Name: classic_algorithm_revisions classic_algorithm_revisions_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.classic_algorithm_revisions
-    ADD CONSTRAINT classic_algorithm_revisions_pkey PRIMARY KEY (id, rev);
-
-
---
--- TOC entry 3032 (class 2606 OID 16638)
+-- TOC entry 2942 (class 2606 OID 16442)
 -- Name: classic_implementation classic_implementation_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -988,16 +629,7 @@ ALTER TABLE ONLY public.classic_implementation
 
 
 --
--- TOC entry 3034 (class 2606 OID 16640)
--- Name: classic_implementation_revisions classic_implementation_revisions_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.classic_implementation_revisions
-    ADD CONSTRAINT classic_implementation_revisions_pkey PRIMARY KEY (id, rev);
-
-
---
--- TOC entry 3036 (class 2606 OID 16642)
+-- TOC entry 2946 (class 2606 OID 16455)
 -- Name: cloud_service cloud_service_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1006,7 +638,7 @@ ALTER TABLE ONLY public.cloud_service
 
 
 --
--- TOC entry 3038 (class 2606 OID 16644)
+-- TOC entry 2944 (class 2606 OID 16447)
 -- Name: cloud_services_compute_resources cloud_services_compute_resources_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1015,7 +647,7 @@ ALTER TABLE ONLY public.cloud_services_compute_resources
 
 
 --
--- TOC entry 3040 (class 2606 OID 16646)
+-- TOC entry 2948 (class 2606 OID 16463)
 -- Name: compute_resource compute_resource_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1024,7 +656,7 @@ ALTER TABLE ONLY public.compute_resource
 
 
 --
--- TOC entry 3042 (class 2606 OID 16648)
+-- TOC entry 2950 (class 2606 OID 16468)
 -- Name: compute_resource_property compute_resource_property_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1033,7 +665,7 @@ ALTER TABLE ONLY public.compute_resource_property
 
 
 --
--- TOC entry 3044 (class 2606 OID 16650)
+-- TOC entry 2952 (class 2606 OID 16476)
 -- Name: compute_resource_property_type compute_resource_property_type_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1042,25 +674,7 @@ ALTER TABLE ONLY public.compute_resource_property_type
 
 
 --
--- TOC entry 3046 (class 2606 OID 16652)
--- Name: concrete_solution concrete_solution_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.concrete_solution
-    ADD CONSTRAINT concrete_solution_pkey PRIMARY KEY (id);
-
-
---
--- TOC entry 3048 (class 2606 OID 16654)
--- Name: concrete_solution_revisions concrete_solution_revisions_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.concrete_solution_revisions
-    ADD CONSTRAINT concrete_solution_revisions_pkey PRIMARY KEY (id, rev);
-
-
---
--- TOC entry 3050 (class 2606 OID 16656)
+-- TOC entry 2954 (class 2606 OID 16481)
 -- Name: discussion_comment discussion_comment_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1069,7 +683,7 @@ ALTER TABLE ONLY public.discussion_comment
 
 
 --
--- TOC entry 3052 (class 2606 OID 16658)
+-- TOC entry 2956 (class 2606 OID 16489)
 -- Name: discussion_topic discussion_topic_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1078,16 +692,7 @@ ALTER TABLE ONLY public.discussion_topic
 
 
 --
--- TOC entry 3054 (class 2606 OID 16660)
--- Name: file file_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.file
-    ADD CONSTRAINT file_pkey PRIMARY KEY (id);
-
-
---
--- TOC entry 3058 (class 2606 OID 16662)
+-- TOC entry 2958 (class 2606 OID 16497)
 -- Name: image image_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1096,25 +701,7 @@ ALTER TABLE ONLY public.image
 
 
 --
--- TOC entry 3066 (class 2606 OID 16664)
--- Name: implementation_package_file implementation_package_file_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.implementation_package_file
-    ADD CONSTRAINT implementation_package_file_pkey PRIMARY KEY (implementation_package_id);
-
-
---
--- TOC entry 3064 (class 2606 OID 16666)
--- Name: implementation_package implementation_package_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.implementation_package
-    ADD CONSTRAINT implementation_package_pkey PRIMARY KEY (id);
-
-
---
--- TOC entry 3062 (class 2606 OID 16668)
+-- TOC entry 2960 (class 2606 OID 16505)
 -- Name: implementation implementation_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1123,7 +710,7 @@ ALTER TABLE ONLY public.implementation
 
 
 --
--- TOC entry 3068 (class 2606 OID 16670)
+-- TOC entry 2962 (class 2606 OID 16510)
 -- Name: implementation_publication implementation_publication_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1132,16 +719,7 @@ ALTER TABLE ONLY public.implementation_publication
 
 
 --
--- TOC entry 3070 (class 2606 OID 16672)
--- Name: implementation_revisions implementation_revisions_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.implementation_revisions
-    ADD CONSTRAINT implementation_revisions_pkey PRIMARY KEY (id, rev);
-
-
---
--- TOC entry 3072 (class 2606 OID 16674)
+-- TOC entry 2964 (class 2606 OID 16515)
 -- Name: implementation_software_platforms implementation_software_platforms_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1150,7 +728,7 @@ ALTER TABLE ONLY public.implementation_software_platforms
 
 
 --
--- TOC entry 3074 (class 2606 OID 16676)
+-- TOC entry 2966 (class 2606 OID 16520)
 -- Name: implementation_tag implementation_tag_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1159,7 +737,7 @@ ALTER TABLE ONLY public.implementation_tag
 
 
 --
--- TOC entry 3076 (class 2606 OID 16678)
+-- TOC entry 2968 (class 2606 OID 16525)
 -- Name: knowledge_artifact knowledge_artifact_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1168,34 +746,7 @@ ALTER TABLE ONLY public.knowledge_artifact
 
 
 --
--- TOC entry 3078 (class 2606 OID 16680)
--- Name: knowledge_artifact_revisions knowledge_artifact_revisions_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.knowledge_artifact_revisions
-    ADD CONSTRAINT knowledge_artifact_revisions_pkey PRIMARY KEY (id, rev);
-
-
---
--- TOC entry 3080 (class 2606 OID 16682)
--- Name: learning_method learning_method_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.learning_method
-    ADD CONSTRAINT learning_method_pkey PRIMARY KEY (id);
-
-
---
--- TOC entry 3114 (class 2606 OID 25932)
--- Name: pattern pattern_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.pattern
-    ADD CONSTRAINT pattern_pkey PRIMARY KEY (id);
-
-
---
--- TOC entry 3082 (class 2606 OID 16684)
+-- TOC entry 2970 (class 2606 OID 16533)
 -- Name: pattern_relation pattern_relation_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1204,7 +755,7 @@ ALTER TABLE ONLY public.pattern_relation
 
 
 --
--- TOC entry 3084 (class 2606 OID 16686)
+-- TOC entry 2972 (class 2606 OID 16538)
 -- Name: pattern_relation_type pattern_relation_type_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1213,7 +764,7 @@ ALTER TABLE ONLY public.pattern_relation_type
 
 
 --
--- TOC entry 3086 (class 2606 OID 16688)
+-- TOC entry 2974 (class 2606 OID 16543)
 -- Name: problem_type problem_type_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1222,7 +773,7 @@ ALTER TABLE ONLY public.problem_type
 
 
 --
--- TOC entry 3088 (class 2606 OID 16690)
+-- TOC entry 2976 (class 2606 OID 16551)
 -- Name: publication publication_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1231,7 +782,7 @@ ALTER TABLE ONLY public.publication
 
 
 --
--- TOC entry 3090 (class 2606 OID 16692)
+-- TOC entry 2978 (class 2606 OID 16559)
 -- Name: quantum_algorithm quantum_algorithm_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1240,16 +791,7 @@ ALTER TABLE ONLY public.quantum_algorithm
 
 
 --
--- TOC entry 3092 (class 2606 OID 16694)
--- Name: quantum_algorithm_revisions quantum_algorithm_revisions_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.quantum_algorithm_revisions
-    ADD CONSTRAINT quantum_algorithm_revisions_pkey PRIMARY KEY (id, rev);
-
-
---
--- TOC entry 3094 (class 2606 OID 16696)
+-- TOC entry 2980 (class 2606 OID 16564)
 -- Name: quantum_implementation quantum_implementation_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1258,25 +800,7 @@ ALTER TABLE ONLY public.quantum_implementation
 
 
 --
--- TOC entry 3096 (class 2606 OID 16698)
--- Name: quantum_implementation_revisions quantum_implementation_revisions_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.quantum_implementation_revisions
-    ADD CONSTRAINT quantum_implementation_revisions_pkey PRIMARY KEY (id, rev);
-
-
---
--- TOC entry 3098 (class 2606 OID 16700)
--- Name: revinfo revinfo_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.revinfo
-    ADD CONSTRAINT revinfo_pkey PRIMARY KEY (rev);
-
-
---
--- TOC entry 3100 (class 2606 OID 16702)
+-- TOC entry 2982 (class 2606 OID 16572)
 -- Name: sketch sketch_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1285,7 +809,7 @@ ALTER TABLE ONLY public.sketch
 
 
 --
--- TOC entry 3104 (class 2606 OID 16704)
+-- TOC entry 2984 (class 2606 OID 16577)
 -- Name: software_platform_cloud_services software_platform_cloud_services_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1294,7 +818,7 @@ ALTER TABLE ONLY public.software_platform_cloud_services
 
 
 --
--- TOC entry 3102 (class 2606 OID 16706)
+-- TOC entry 2988 (class 2606 OID 16590)
 -- Name: software_platform software_platform_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1303,7 +827,7 @@ ALTER TABLE ONLY public.software_platform
 
 
 --
--- TOC entry 3106 (class 2606 OID 16708)
+-- TOC entry 2986 (class 2606 OID 16582)
 -- Name: software_platforms_compute_resources software_platforms_compute_resources_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1312,7 +836,7 @@ ALTER TABLE ONLY public.software_platforms_compute_resources
 
 
 --
--- TOC entry 3108 (class 2606 OID 16710)
+-- TOC entry 2990 (class 2606 OID 16598)
 -- Name: tag tag_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1321,43 +845,7 @@ ALTER TABLE ONLY public.tag
 
 
 --
--- TOC entry 3110 (class 2606 OID 16712)
--- Name: tosca_application tosca_application_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.tosca_application
-    ADD CONSTRAINT tosca_application_pkey PRIMARY KEY (id);
-
-
---
--- TOC entry 3112 (class 2606 OID 16714)
--- Name: tosca_application_revisions tosca_application_revisions_pkey; Type: CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.tosca_application_revisions
-    ADD CONSTRAINT tosca_application_revisions_pkey PRIMARY KEY (id, rev);
-
-
---
--- TOC entry 3060 (class 2606 OID 16716)
--- Name: image uk_jqvkpvfxplx2ikya5bme8jpk2; Type: CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.image
-    ADD CONSTRAINT uk_jqvkpvfxplx2ikya5bme8jpk2 UNIQUE (sketch_id);
-
-
---
--- TOC entry 3056 (class 2606 OID 16718)
--- Name: file uk_n5wsqy9uctlh9ihpgvm5evrqi; Type: CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.file
-    ADD CONSTRAINT uk_n5wsqy9uctlh9ihpgvm5evrqi UNIQUE (fileurl);
-
-
---
--- TOC entry 3173 (class 2606 OID 16719)
+-- TOC entry 3034 (class 2606 OID 16814)
 -- Name: sketch fk1127ygjhclmhfr5twkvoymhum; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1366,7 +854,7 @@ ALTER TABLE ONLY public.sketch
 
 
 --
--- TOC entry 3164 (class 2606 OID 16724)
+-- TOC entry 3027 (class 2606 OID 16779)
 -- Name: pattern_relation fk2hap3a25ae7i3n1ir2srffhq9; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1375,7 +863,7 @@ ALTER TABLE ONLY public.pattern_relation
 
 
 --
--- TOC entry 3128 (class 2606 OID 16729)
+-- TOC entry 2999 (class 2606 OID 16639)
 -- Name: algorithm_tag fk2k599458h8m62np4m75ukcvm0; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1384,7 +872,7 @@ ALTER TABLE ONLY public.algorithm_tag
 
 
 --
--- TOC entry 3166 (class 2606 OID 16734)
+-- TOC entry 3028 (class 2606 OID 16784)
 -- Name: publication fk2m528opx84shvoyy4fxpok7t5; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1393,7 +881,7 @@ ALTER TABLE ONLY public.publication
 
 
 --
--- TOC entry 3175 (class 2606 OID 16739)
+-- TOC entry 3035 (class 2606 OID 16819)
 -- Name: software_platform_cloud_services fk33jvx36u9tc8y97amj90aq4p5; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1402,7 +890,7 @@ ALTER TABLE ONLY public.software_platform_cloud_services
 
 
 --
--- TOC entry 3177 (class 2606 OID 16744)
+-- TOC entry 3037 (class 2606 OID 16829)
 -- Name: software_platforms_compute_resources fk3idoyrtaifamtyfdqr5ewvdtv; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1411,7 +899,7 @@ ALTER TABLE ONLY public.software_platforms_compute_resources
 
 
 --
--- TOC entry 3137 (class 2606 OID 16749)
+-- TOC entry 3010 (class 2606 OID 16694)
 -- Name: compute_resource_property fk3ilvgc8wusnfhy0cgl8cvqsrs; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1420,7 +908,7 @@ ALTER TABLE ONLY public.compute_resource_property
 
 
 --
--- TOC entry 3132 (class 2606 OID 16754)
+-- TOC entry 3004 (class 2606 OID 16664)
 -- Name: classic_implementation fk3je79xy3m07m7de0rxt3pts8d; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1429,7 +917,7 @@ ALTER TABLE ONLY public.classic_implementation
 
 
 --
--- TOC entry 3161 (class 2606 OID 16759)
+-- TOC entry 3024 (class 2606 OID 16764)
 -- Name: implementation_tag fk3p2fgn1pojdw4kr6l4t6w3l87; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1438,25 +926,7 @@ ALTER TABLE ONLY public.implementation_tag
 
 
 --
--- TOC entry 3172 (class 2606 OID 16764)
--- Name: quantum_implementation_revisions fk3so4s4qwyqav6839107xqyips; Type: FK CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.quantum_implementation_revisions
-    ADD CONSTRAINT fk3so4s4qwyqav6839107xqyips FOREIGN KEY (id, rev) REFERENCES public.implementation_revisions(id, rev);
-
-
---
--- TOC entry 3154 (class 2606 OID 16769)
--- Name: implementation_package_file fk3uh0o0od9c1eovvua5trb3pp1; Type: FK CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.implementation_package_file
-    ADD CONSTRAINT fk3uh0o0od9c1eovvua5trb3pp1 FOREIGN KEY (implementation_package_id) REFERENCES public.implementation_package(id);
-
-
---
--- TOC entry 3116 (class 2606 OID 16774)
+-- TOC entry 2993 (class 2606 OID 16609)
 -- Name: algorithm_application_area fk4kjef0upq0qftpafdd25l7t0c; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1465,7 +935,7 @@ ALTER TABLE ONLY public.algorithm_application_area
 
 
 --
--- TOC entry 3122 (class 2606 OID 16779)
+-- TOC entry 2997 (class 2606 OID 16629)
 -- Name: algorithm_publication fk4ksdqnqv8lw1685grhv4kjywf; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1474,16 +944,7 @@ ALTER TABLE ONLY public.algorithm_publication
 
 
 --
--- TOC entry 3155 (class 2606 OID 16784)
--- Name: implementation_package_file fk5atkjjk7le6sb882i7h4tsijv; Type: FK CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.implementation_package_file
-    ADD CONSTRAINT fk5atkjjk7le6sb882i7h4tsijv FOREIGN KEY (file_id) REFERENCES public.file(id);
-
-
---
--- TOC entry 3124 (class 2606 OID 16789)
+-- TOC entry 3002 (class 2606 OID 16654)
 -- Name: algorithm_relation fk5p53wf3j277a176t73ef3wuv2; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1492,7 +953,7 @@ ALTER TABLE ONLY public.algorithm_relation
 
 
 --
--- TOC entry 3129 (class 2606 OID 16794)
+-- TOC entry 2998 (class 2606 OID 16634)
 -- Name: algorithm_tag fk5skhq8p0k8aso9cl8cds8q3q1; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1501,7 +962,7 @@ ALTER TABLE ONLY public.algorithm_tag
 
 
 --
--- TOC entry 3167 (class 2606 OID 16799)
+-- TOC entry 3029 (class 2606 OID 16789)
 -- Name: publication_authors fk6iioc1g7j5y16e7vw3x1anodj; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1510,7 +971,7 @@ ALTER TABLE ONLY public.publication_authors
 
 
 --
--- TOC entry 3178 (class 2606 OID 16804)
+-- TOC entry 3038 (class 2606 OID 16834)
 -- Name: software_platforms_compute_resources fk71k3mlsekeell9ei812sduh8o; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1519,7 +980,7 @@ ALTER TABLE ONLY public.software_platforms_compute_resources
 
 
 --
--- TOC entry 3170 (class 2606 OID 16809)
+-- TOC entry 3031 (class 2606 OID 16799)
 -- Name: quantum_implementation fk793p84p7n3qh71le8iqyvchv9; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1528,7 +989,7 @@ ALTER TABLE ONLY public.quantum_implementation
 
 
 --
--- TOC entry 3144 (class 2606 OID 16814)
+-- TOC entry 3012 (class 2606 OID 16704)
 -- Name: discussion_comment fk7st41tqwtxhelg9euc4y4qqm4; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1537,25 +998,7 @@ ALTER TABLE ONLY public.discussion_comment
 
 
 --
--- TOC entry 3131 (class 2606 OID 16819)
--- Name: classic_algorithm_revisions fk8df15f4k8eyh0hvpmtxw6g0fe; Type: FK CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.classic_algorithm_revisions
-    ADD CONSTRAINT fk8df15f4k8eyh0hvpmtxw6g0fe FOREIGN KEY (id, rev) REFERENCES public.algorithm_revisions(id, rev);
-
-
---
--- TOC entry 3118 (class 2606 OID 16824)
--- Name: algorithm_learning_method fk8jqnda2x7hwqfd0ssnrfphkir; Type: FK CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.algorithm_learning_method
-    ADD CONSTRAINT fk8jqnda2x7hwqfd0ssnrfphkir FOREIGN KEY (learning_method_id) REFERENCES public.learning_method(id);
-
-
---
--- TOC entry 3165 (class 2606 OID 16829)
+-- TOC entry 3026 (class 2606 OID 16774)
 -- Name: pattern_relation fk9by0eabrmyinhakiirdy7finm; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1564,7 +1007,7 @@ ALTER TABLE ONLY public.pattern_relation
 
 
 --
--- TOC entry 3125 (class 2606 OID 16834)
+-- TOC entry 3001 (class 2606 OID 16649)
 -- Name: algorithm_relation fk9cbjg9pmuosnnifvfqqnu77aa; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1573,7 +1016,7 @@ ALTER TABLE ONLY public.algorithm_relation
 
 
 --
--- TOC entry 3151 (class 2606 OID 16839)
+-- TOC entry 3018 (class 2606 OID 16734)
 -- Name: implementation fkahksfpw97e0c9jet3vu489ohb; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1582,16 +1025,7 @@ ALTER TABLE ONLY public.implementation
 
 
 --
--- TOC entry 3134 (class 2606 OID 16844)
--- Name: classic_implementation_revisions fkbeqxuyccy9rf3a7ougkr9fqcg; Type: FK CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.classic_implementation_revisions
-    ADD CONSTRAINT fkbeqxuyccy9rf3a7ougkr9fqcg FOREIGN KEY (id, rev) REFERENCES public.implementation_revisions(id, rev);
-
-
---
--- TOC entry 3120 (class 2606 OID 16849)
+-- TOC entry 2994 (class 2606 OID 16614)
 -- Name: algorithm_problem_type fkbqoq02m0qsrxllbnb0d7k52vi; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1600,16 +1034,7 @@ ALTER TABLE ONLY public.algorithm_problem_type
 
 
 --
--- TOC entry 3119 (class 2606 OID 16854)
--- Name: algorithm_learning_method fkcgobnecnyo8tn6y7yybhkhqm0; Type: FK CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.algorithm_learning_method
-    ADD CONSTRAINT fkcgobnecnyo8tn6y7yybhkhqm0 FOREIGN KEY (algorithm_id) REFERENCES public.algorithm(id);
-
-
---
--- TOC entry 3156 (class 2606 OID 16859)
+-- TOC entry 3021 (class 2606 OID 16749)
 -- Name: implementation_publication fkch41y23ssi6oj169speo5dxoy; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1618,7 +1043,7 @@ ALTER TABLE ONLY public.implementation_publication
 
 
 --
--- TOC entry 3121 (class 2606 OID 16864)
+-- TOC entry 2995 (class 2606 OID 16619)
 -- Name: algorithm_problem_type fkd383l41lvcuvooum4re1trytr; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1627,7 +1052,7 @@ ALTER TABLE ONLY public.algorithm_problem_type
 
 
 --
--- TOC entry 3135 (class 2606 OID 16869)
+-- TOC entry 3007 (class 2606 OID 16679)
 -- Name: cloud_services_compute_resources fkdyyng98y8qeuks8qjfeg9jime; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1636,16 +1061,7 @@ ALTER TABLE ONLY public.cloud_services_compute_resources
 
 
 --
--- TOC entry 3163 (class 2606 OID 16874)
--- Name: knowledge_artifact_revisions fkeb7ea1o9q4mtn2l9fdd0ixude; Type: FK CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.knowledge_artifact_revisions
-    ADD CONSTRAINT fkeb7ea1o9q4mtn2l9fdd0ixude FOREIGN KEY (rev) REFERENCES public.revinfo(rev);
-
-
---
--- TOC entry 3146 (class 2606 OID 16879)
+-- TOC entry 3015 (class 2606 OID 16719)
 -- Name: discussion_topic fkeet74vudcv9mlofm7f2ttpa4p; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1654,7 +1070,7 @@ ALTER TABLE ONLY public.discussion_topic
 
 
 --
--- TOC entry 3174 (class 2606 OID 16884)
+-- TOC entry 3033 (class 2606 OID 16809)
 -- Name: sketch fkehjal9c57gebep6lsrrfkbq61; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1663,7 +1079,7 @@ ALTER TABLE ONLY public.sketch
 
 
 --
--- TOC entry 3123 (class 2606 OID 16889)
+-- TOC entry 2996 (class 2606 OID 16624)
 -- Name: algorithm_publication fkeks3idqeo7ys2f6duiny918dr; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1672,7 +1088,7 @@ ALTER TABLE ONLY public.algorithm_publication
 
 
 --
--- TOC entry 3159 (class 2606 OID 16894)
+-- TOC entry 3022 (class 2606 OID 16754)
 -- Name: implementation_software_platforms fkf2yb5f1c98uplaxylmmgpms91; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1681,7 +1097,7 @@ ALTER TABLE ONLY public.implementation_software_platforms
 
 
 --
--- TOC entry 3130 (class 2606 OID 16899)
+-- TOC entry 3003 (class 2606 OID 16659)
 -- Name: classic_algorithm fkf8hl76cv1lapta56g1vjdyyow; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1690,7 +1106,7 @@ ALTER TABLE ONLY public.classic_algorithm
 
 
 --
--- TOC entry 3133 (class 2606 OID 16904)
+-- TOC entry 3005 (class 2606 OID 16669)
 -- Name: classic_implementation fkftorvyxvkj4ok7apanwd4n5m6; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1699,7 +1115,7 @@ ALTER TABLE ONLY public.classic_implementation
 
 
 --
--- TOC entry 3162 (class 2606 OID 16909)
+-- TOC entry 3025 (class 2606 OID 16769)
 -- Name: implementation_tag fkgllsrswnpwu9bfhvcghyj19oo; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1708,7 +1124,7 @@ ALTER TABLE ONLY public.implementation_tag
 
 
 --
--- TOC entry 3115 (class 2606 OID 16914)
+-- TOC entry 2991 (class 2606 OID 16599)
 -- Name: algorithm fkh714p5lo5u77x1bc14s4g8b3t; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1717,7 +1133,7 @@ ALTER TABLE ONLY public.algorithm
 
 
 --
--- TOC entry 3145 (class 2606 OID 16919)
+-- TOC entry 3013 (class 2606 OID 16709)
 -- Name: discussion_comment fkhvhl406lwx2yrn62u7pdf5se5; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1726,7 +1142,7 @@ ALTER TABLE ONLY public.discussion_comment
 
 
 --
--- TOC entry 3138 (class 2606 OID 16924)
+-- TOC entry 3011 (class 2606 OID 16699)
 -- Name: compute_resource_property fkk7lt36lixpn6vtn3bnwk3i1e3; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1735,7 +1151,7 @@ ALTER TABLE ONLY public.compute_resource_property
 
 
 --
--- TOC entry 3168 (class 2606 OID 16929)
+-- TOC entry 3030 (class 2606 OID 16794)
 -- Name: quantum_algorithm fkksxr1gyvxadejxfhfrfkh5m1; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1744,7 +1160,7 @@ ALTER TABLE ONLY public.quantum_algorithm
 
 
 --
--- TOC entry 3176 (class 2606 OID 16934)
+-- TOC entry 3036 (class 2606 OID 16824)
 -- Name: software_platform_cloud_services fkl8r1e28p0o06sar2ujke0yx4o; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1753,7 +1169,7 @@ ALTER TABLE ONLY public.software_platform_cloud_services
 
 
 --
--- TOC entry 3149 (class 2606 OID 16939)
+-- TOC entry 3016 (class 2606 OID 16724)
 -- Name: image fkltsrliwwi922e2s4gng5m6wqx; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1762,16 +1178,7 @@ ALTER TABLE ONLY public.image
 
 
 --
--- TOC entry 3179 (class 2606 OID 16944)
--- Name: tosca_application_revisions fklu7vxdc1vikl8mjxixrc44hbg; Type: FK CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.tosca_application_revisions
-    ADD CONSTRAINT fklu7vxdc1vikl8mjxixrc44hbg FOREIGN KEY (rev) REFERENCES public.revinfo(rev);
-
-
---
--- TOC entry 3157 (class 2606 OID 16949)
+-- TOC entry 3020 (class 2606 OID 16744)
 -- Name: implementation_publication fklv2uiqj4rrymnmqbuudet7fjb; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1780,7 +1187,7 @@ ALTER TABLE ONLY public.implementation_publication
 
 
 --
--- TOC entry 3171 (class 2606 OID 16954)
+-- TOC entry 3032 (class 2606 OID 16804)
 -- Name: quantum_implementation fkm4d7ussdf2l8kf5627q84k7ld; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1789,16 +1196,7 @@ ALTER TABLE ONLY public.quantum_implementation
 
 
 --
--- TOC entry 3143 (class 2606 OID 16959)
--- Name: concrete_solution_revisions fkm7iijrmxbbd2c3jn48c3y10ih; Type: FK CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.concrete_solution_revisions
-    ADD CONSTRAINT fkm7iijrmxbbd2c3jn48c3y10ih FOREIGN KEY (id, rev) REFERENCES public.knowledge_artifact_revisions(id, rev);
-
-
---
--- TOC entry 3139 (class 2606 OID 16964)
+-- TOC entry 3008 (class 2606 OID 16684)
 -- Name: compute_resource_property fkmnnvywwb2eqox08q7x6nnyscf; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1807,7 +1205,7 @@ ALTER TABLE ONLY public.compute_resource_property
 
 
 --
--- TOC entry 3152 (class 2606 OID 16969)
+-- TOC entry 3019 (class 2606 OID 16739)
 -- Name: implementation fknqdt30hn1h4sm25ah5gdi38u0; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1816,7 +1214,7 @@ ALTER TABLE ONLY public.implementation
 
 
 --
--- TOC entry 3147 (class 2606 OID 16974)
+-- TOC entry 3014 (class 2606 OID 16714)
 -- Name: discussion_topic fknx1gpextw0013t1hb0lett1sk; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1825,34 +1223,7 @@ ALTER TABLE ONLY public.discussion_topic
 
 
 --
--- TOC entry 3127 (class 2606 OID 16979)
--- Name: algorithm_revisions fkot3e5cot23vsjlm3gu3qjxbdp; Type: FK CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.algorithm_revisions
-    ADD CONSTRAINT fkot3e5cot23vsjlm3gu3qjxbdp FOREIGN KEY (id, rev) REFERENCES public.knowledge_artifact_revisions(id, rev);
-
-
---
--- TOC entry 3153 (class 2606 OID 16984)
--- Name: implementation_package fkp1jt3ecfmmfooabum8bmbqcdw; Type: FK CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.implementation_package
-    ADD CONSTRAINT fkp1jt3ecfmmfooabum8bmbqcdw FOREIGN KEY (implementation_id) REFERENCES public.implementation(id);
-
-
---
--- TOC entry 3158 (class 2606 OID 16989)
--- Name: implementation_revisions fkpuly5cychyseh24dwlcc3ortc; Type: FK CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.implementation_revisions
-    ADD CONSTRAINT fkpuly5cychyseh24dwlcc3ortc FOREIGN KEY (id, rev) REFERENCES public.knowledge_artifact_revisions(id, rev);
-
-
---
--- TOC entry 3136 (class 2606 OID 16994)
+-- TOC entry 3006 (class 2606 OID 16674)
 -- Name: cloud_services_compute_resources fkqklkuiospnsfn6n5k7uh57mwh; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1861,16 +1232,7 @@ ALTER TABLE ONLY public.cloud_services_compute_resources
 
 
 --
--- TOC entry 3169 (class 2606 OID 16999)
--- Name: quantum_algorithm_revisions fkqtm60vujwu1ojuryrxavjm97e; Type: FK CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.quantum_algorithm_revisions
-    ADD CONSTRAINT fkqtm60vujwu1ojuryrxavjm97e FOREIGN KEY (id, rev) REFERENCES public.algorithm_revisions(id, rev);
-
-
---
--- TOC entry 3117 (class 2606 OID 17004)
+-- TOC entry 2992 (class 2606 OID 16604)
 -- Name: algorithm_application_area fkr5g50nihf4cl2e6cwv4hfs1p; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1879,7 +1241,7 @@ ALTER TABLE ONLY public.algorithm_application_area
 
 
 --
--- TOC entry 3150 (class 2606 OID 17009)
+-- TOC entry 3017 (class 2606 OID 16729)
 -- Name: image fkrgn16rchq4y9vhhx26m1pj2kh; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1888,16 +1250,7 @@ ALTER TABLE ONLY public.image
 
 
 --
--- TOC entry 3148 (class 2606 OID 17014)
--- Name: file fkslri61hv3myrsoy2k83pv29il; Type: FK CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.file
-    ADD CONSTRAINT fkslri61hv3myrsoy2k83pv29il FOREIGN KEY (id) REFERENCES public.knowledge_artifact(id);
-
-
---
--- TOC entry 3126 (class 2606 OID 17019)
+-- TOC entry 3000 (class 2606 OID 16644)
 -- Name: algorithm_relation fksoc9d6qhee9xmia2o80adfymt; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1906,7 +1259,7 @@ ALTER TABLE ONLY public.algorithm_relation
 
 
 --
--- TOC entry 3140 (class 2606 OID 17024)
+-- TOC entry 3009 (class 2606 OID 16689)
 -- Name: compute_resource_property fktdgysfhlbm4cj20vfw7suap8i; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1915,7 +1268,7 @@ ALTER TABLE ONLY public.compute_resource_property
 
 
 --
--- TOC entry 3160 (class 2606 OID 17029)
+-- TOC entry 3023 (class 2606 OID 16759)
 -- Name: implementation_software_platforms fktmwiwx6s8svey7vl5wd1wbp25; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
@@ -1923,25 +1276,7 @@ ALTER TABLE ONLY public.implementation_software_platforms
     ADD CONSTRAINT fktmwiwx6s8svey7vl5wd1wbp25 FOREIGN KEY (implementation_id) REFERENCES public.implementation(id);
 
 
---
--- TOC entry 3141 (class 2606 OID 17034)
--- Name: concrete_solution ref_to_implemented_algorithm_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.concrete_solution
-    ADD CONSTRAINT ref_to_implemented_algorithm_id_fkey FOREIGN KEY (implemented_algorithm_id) REFERENCES public.algorithm(id);
-
-
---
--- TOC entry 3142 (class 2606 OID 17039)
--- Name: concrete_solution ref_to_knowledge_artifact_fkey; Type: FK CONSTRAINT; Schema: public; Owner: planqk
---
-
-ALTER TABLE ONLY public.concrete_solution
-    ADD CONSTRAINT ref_to_knowledge_artifact_fkey FOREIGN KEY (id) REFERENCES public.knowledge_artifact(id);
-
-
--- Completed on 2023-11-01 13:15:32 CET
+-- Completed on 2020-10-02 12:52:43 CEST
 
 --
 -- PostgreSQL database dump complete
