@@ -1,6 +1,6 @@
 FROM postgres:12
 
-LABEL MAINTAINER Manuela Weigold <manuela.weigold@iaas.uni-stuttgart.de>
+LABEL MAINTAINER Daniel Georg <daniel.georg@iaas.uni-stuttgart.de>
 
 ENV QC_ATLAS_CONTENT_REPOSITORY_URL "git@github.com:PlanQK/planqk-atlas-content.git"
 ENV QC_ATLAS_CONTENT_REPOSITORY_PATH "/var/qc-atlas/testdata"
