@@ -2,12 +2,13 @@ FROM postgres:12
 
 LABEL MAINTAINER Daniel Georg <daniel.georg@iaas.uni-stuttgart.de>
 
-ENV QC_ATLAS_CONTENT_REPOSITORY_URL "git@github.com:PlanQK/planqk-atlas-content.git"
+ENV QC_ATLAS_CONTENT_REPOSITORY_URL "https://github.com/LEQO-Framework/qc-atlas-content.git"
 ENV QC_ATLAS_CONTENT_REPOSITORY_PATH "/var/qc-atlas/testdata"
 ENV SUBFOLDER_CONTENT_REPO_BACKUP_FILES "example-data/SQL/backup-files"
+ENV QC_ATLAS_CONTENT_REPOSITORY_BRANCH "main"
 ENV POSTGRES_PASSWORD postgres
 ENV POSTGRES_USER postgres
-ENV JDBC_DATABASE_PORT 5432
+ENV JDBC_DATABASE_PORT 5060
 ENV POSTGRES_DB db
 
 # install dependencies (git)
