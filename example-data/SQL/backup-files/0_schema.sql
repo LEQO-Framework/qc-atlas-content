@@ -46,7 +46,7 @@ CREATE TABLE public.algorithm (
 ALTER TABLE public.algorithm OWNER TO planqk;
 
 --
--- TOC entry 203 (class 1259 OID 16398)
+-- TOC entry 203 (class 1259 OID 16394)
 -- Name: algorithm_application_area; Type: TABLE; Schema: public; Owner: planqk
 --
 
@@ -1273,8 +1273,8 @@ ALTER TABLE ONLY public.compute_resource_property
 -- Name: implementation_software_platforms fktmwiwx6s8svey7vl5wd1wbp25; Type: FK CONSTRAINT; Schema: public; Owner: planqk
 --
 
-ALTER TABLE ONLY public.implementation_software_platforms
-    ADD CONSTRAINT fktmwiwx6s8svey7vl5wd1wbp25 FOREIGN KEY (implementation_id) REFERENCES public.implementation(id);
+ALTER TABLE ONLY public.file_concrete_solution
+    ADD CONSTRAINT fktfu3winnrqmbwr3vv5x9b7hpn FOREIGN KEY (id) REFERENCES public.concrete_solution(id);
 
 
 -- Completed on 2020-10-02 12:52:43 CEST
