@@ -3,9 +3,9 @@
 --
 
 -- Dumped from database version 12.5 (Debian 12.5-1.pgdg100+1)
--- Dumped by pg_dump version 14.10 (Ubuntu 14.10-0ubuntu0.22.04.1)
+-- Dumped by pg_dump version 14.9 (Ubuntu 14.9-0ubuntu0.22.04.1)
 
--- Started on 2023-12-20 09:41:29 CET
+-- Started on 2023-10-30 10:06:05 CET
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -19,228 +19,123 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- TOC entry 3340 (class 0 OID 16528)
--- Dependencies: 236
+-- TOC entry 3328 (class 0 OID 16526)
+-- Dependencies: 234
 -- Data for Name: knowledge_artifact; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
+INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('379ec44e-1ce5-11eb-adf2-0242ac160002', '2020-11-02 08:27:17.116336', '2020-11-02 08:27:17.116336');
+INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('b61578ed-df66-44ec-954c-9bcf9906f490', NULL, NULL);
+INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('4ab28e22-cdf9-45f8-b872-f4d9d2757b6d', NULL, NULL);
+INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('16aa96c5-b668-4df9-a03f-96d323708676', NULL, NULL);
+INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('9aa16271-6ea1-4e15-ad9d-6e6e264a0ad0', NULL, NULL);
+INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('b5df6c13-e619-496c-ada0-80fc3486f733', NULL, NULL);
+INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('b3b616b6-6e4a-49b1-baf7-f08fa962a441', NULL, NULL);
+INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('e07898e3-280f-4701-9d54-7d051af8d448', NULL, NULL);
+INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('170eff66-733f-4043-a56b-3189bf474d62', NULL, NULL);
+INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('1066e01c-e3ac-4830-b610-eb613187850c', NULL, NULL);
 INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('f05c9136-2f9f-433f-9c35-85009111ee3c', NULL, NULL);
 INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('87d697a4-6256-4f84-b545-c2024ab380c2', NULL, NULL);
 INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('3aac6a37-10de-4a95-a2bd-381d357df2a4', NULL, NULL);
 INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('ae6bdf6f-2656-45bd-9b96-0820eea3cdab', NULL, NULL);
 INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('9829e814-a707-479f-80c7-8b49ffa543bc', NULL, NULL);
 INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('52ae7837-58e1-47b2-bda3-4134597ef138', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('2229a430-fe92-4411-9d72-d10dd1d8da14', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('45d09c54-3f4a-453b-885d-2772443c8d72', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('4074490a-4236-49ed-83d1-625ce58e2dbd', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('e595558d-bfea-4b82-9f47-a38a2097b245', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('312bc9d3-26c0-40ae-b90b-56effd136c0d', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('4437fb83-34c0-47a8-8c6f-1272a76b76bb', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('d4f7c247-e2bb-4301-ad06-f758fa58f2dc', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('bcd4c7a1-3c92-4f8c-a530-72b8b95d3750', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('3d1f3991-df47-4d42-8f9a-e6dcf4e3ccec', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('1a5e3708-da39-4356-ab3f-115264da6390', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('b6788c99-24f5-496b-a30c-fc0dd7bb3e96', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('5479acf4-0588-49af-a6a9-4956b7ee32af', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('ed3af509-904e-4732-8113-215d65a7d53d', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('8fcca2dc-fca0-47cf-9bd4-038cd2fe8fb8', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('3f3fabf0-7fa7-4b43-a74a-46a7ac2c55ee', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('c450e0ce-c55f-4b72-afe9-e9e2c7e4c091', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('b657ea73-63c0-4800-a69d-a91925e19ac6', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('96b4d28a-a5ce-4c96-85df-d42587b13c57', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('502147ec-45fa-403f-8f52-e196b3359399', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('1cc7e9d6-ab37-412e-8afa-604a25de296e', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('3f3d5582-1af9-4a23-93f5-5d0474b2b42c', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('c6560c51-d2e3-4595-b9c3-b609c75c0b82', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('1c95912a-128b-44e7-b2d4-930f7ba11060', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('9af072e8-875b-4e7d-980a-98cc6e0e7fd6', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('70adfd6f-0648-47cf-88ff-0212b882a262', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('da93f915-7f4c-49df-99d0-80d91f26a337', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('482714a7-8409-4165-93fe-72b02c2ae99c', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('aa90de15-b7e3-45a7-bb48-f0a5b8b2c479', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('dd15032b-ce2b-40b6-80ac-97623255b531', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('424c803a-aefb-4b54-8e45-d177fedac893', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('d5cda8c9-f39b-474a-9032-c17131884975', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('a4ea9f6c-5b0a-4beb-a056-8b261d96ba80', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('d9c57511-1101-4707-99bf-36f43a12cb13', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('ddd64fb6-b324-45eb-8e21-8193dc311841', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('5850c6ab-5c87-4331-8439-73692a403228', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('bc795a9b-7977-4e01-b513-f9f5aba38aa7', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('27a5d147-a323-4c6a-84ef-45d80cae923d', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('3ea9e187-e91b-4852-84eb-b35b5c480892', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('3d9bca6e-5fca-40c5-b005-8a794958f3aa', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('28c99b35-98ce-4bfe-bb6d-94a65207258a', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('7821a1f9-02a0-4833-a048-3bf184b1c6fe', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('78b1fe35-9739-46b3-8baf-21731d886913', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('cdbd8bf8-84ac-49f6-a58e-e7414333947c', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('92dddd27-4627-42aa-b667-a9c9d805e475', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('aab9d0f8-2c0b-4ed8-8a82-1b4e91358854', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('ebc49a18-4a96-416c-9dd6-5de89d0d1b89', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('5651c09a-634c-4ca1-a5cb-d38ce946c60a', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('8f497741-928c-480c-9085-1036b2e24051', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('b8785a66-2805-4559-8332-dd348ace3afc', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('e316884d-c2c6-453f-a08b-372167957277', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('467cae27-d8be-4509-af26-64ed0a809028', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('61130a8b-68ad-4281-80ad-a62d44bc4090', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('386a4d90-1a3d-427c-96a6-6f1a433daae6', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('2fb586fd-9982-4f4e-987b-17909069e10e', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('cbc6fe12-4a7d-4de5-b709-b20dd0cacbbf', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('7c8849ee-26ad-4910-b798-902367e617d6', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('55f886b3-4fe0-4bc8-8bde-d0b7004a70ee', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('da2bd135-4ba2-4b98-bb77-c60607402094', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('5190eb38-48a2-41ee-b85e-dbb3c609ed30', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('da3a0878-df45-4eb1-857e-82e5ae055683', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('e22b33bc-b5cf-4a61-a8e9-dd204c48857b', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('f675060d-34cd-4af7-abb7-864a8b9adef6', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('155933df-9d41-4b2d-bdf8-11291fb7084c', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('3d6ef3c9-28dd-4d2f-b006-e3427e24c0b0', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('f53f1daa-1eda-4fd9-966f-3f14c107930a', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('10edf46a-113f-4688-9af6-75494b950fbf', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('47e05a38-2201-49f2-80e6-17d618ed260f', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('e4e0fe4d-8757-4253-95de-a6f13ea66f30', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('000904c1-aa91-498b-88da-d6cb014931df', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('a7bc398e-972a-481f-8c63-b4c5a1b946d9', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('678a2e5a-697f-4416-afe6-fd18bc935bdc', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('d6d9a4e5-0944-4360-8af9-77d6f780716e', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('d6db370c-42eb-414b-80b7-af50c14fb7e4', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('2ee3eb24-165d-46d5-976c-9eb052a1912b', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('0a4ffca5-3b28-4897-9842-295f9bb6bea8', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('d285eda8-41ee-4ba2-879d-52acec6a1416', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('d8c99d65-8950-4b83-aa1d-549a88e28339', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('94331ad5-4f67-4183-8fbe-55fe9c542789', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('4710c428-a004-4da1-98a8-58205e051ec2', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('0b5ba218-dcb1-4841-a517-b6010b8a2951', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('9bcced52-edb3-44a2-a86d-43499ea61289', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('7d2e969e-c266-4a83-85a5-5a07d528c6ef', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('35de7456-fced-4c23-bca5-8777984bf731', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('10a46ac6-1420-41ad-9d3a-ab244d959062', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('d53673f0-fc52-48c8-8893-f8f244cf6ee3', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('45fdc628-1914-4b2c-92c4-38f7be3c622a', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('b228d692-009d-4122-b617-1a3799a68766', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('a6e349c7-d5c0-42a7-bd78-21e4b2738fa7', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('4d153210-05d9-43f0-8560-3c3bd722d8bd', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('0145a85e-3b00-4e64-9e20-bdaf77d2fc86', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('407ae0d5-e5be-4151-900b-041ed5dfcdbe', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('e6106e4d-46a4-4557-8c2d-009ff7159464', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('5d7a8af7-94fb-4c63-958c-403d845d4107', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('ce95634f-69e0-4f97-a9b6-10bc8364849f', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('50d0b397-d2df-4797-8975-d2526c8cdd63', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('cd686d46-c77f-4c35-8016-f9819282f8a5', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('b6436fe2-9e3f-49ac-9e09-5cce86e480e1', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('bace6e02-1e3f-4ddc-9e9a-eb04933fa226', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('ecb7d0a0-72d0-44c3-90dd-5b9af536ebca', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('81dba31f-e19a-4a8b-a07f-e1561fc2ce06', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('3baad63c-42d2-46cb-b7a5-ab394b4e012c', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('7116be12-b724-456f-ac3d-0a1ab6e85b9a', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('801d44ab-fc18-4cc0-8e10-49f2e73b229a', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('7f488cff-525f-4e50-a6c6-219b4ab4854d', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('e35d735c-f724-4946-aad9-7fa520d5a843', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('b8e826e0-dc07-4515-ae10-87b402e3d52c', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('358bf776-378f-465e-a9e6-e8a1c7716825', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('3b090377-8703-4cf7-9ce8-a432dce76335', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('f69638dc-6844-415c-a679-d3982c691f38', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('34b02438-ceaf-4177-9a3e-74f907cfd63d', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('b7602673-7825-48e2-829e-b9df269071fc', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('9b50b4bf-4b5c-4d52-a7d3-1b0e6a0f53f9', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('1dafcbc7-f048-4867-ad7f-2d0b40e096e1', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('6d763f90-d7d4-4d58-a82c-09bb68ac6b82', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('68a4bbc9-2535-4cfc-a4f4-b149adfb674a', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('3a1fb1cd-1078-4616-b603-a22c8f9449b2', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('80d829b6-d1ed-40a3-95ea-7e0b34de8eba', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('b9484449-18bd-4667-a9e5-1f6bf66d442d', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('a81eb2c5-84ce-4a14-8242-e9ce19532423', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('15da23b4-5ad5-44ff-8936-140dd98935df', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('599e5d49-ede8-489b-bb72-3e41c288ae89', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('e6e239af-3d3a-4dfb-8c84-cbe268ca90d4', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('b86f6da4-3c9e-4146-8161-9c806b50b923', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('c12b3086-5fa4-4140-915b-330fbffdfc43', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('1a1b9319-e303-431d-91c3-f4a3b6189982', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('9bafcace-20a3-4726-963b-06d09437c677', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('26c8f1cb-a592-415e-846e-22f2ee761c8f', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('d89d5a40-b864-4d97-9b44-211ed25c4f98', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('c56361d3-4230-4653-942b-fc8ac7488bf9', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('19c5ed05-1a24-4971-9aac-390e1931f010', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('b14e9775-09ad-4019-b5db-dd9670221679', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('f3afc386-7c81-41d1-9b94-a06a49deb965', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('ef45bb4d-7f1a-4840-9783-aa22ed40032a', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('ea7c0692-6545-40e3-8cf8-f4c828c5fce8', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('330ba4a6-411d-4d44-913a-2805a9f21cf7', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('acb053d6-b8be-4bce-b62d-3a8aa10b9a0d', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('c34d4c11-da4f-445d-8682-1c92dcfbb6be', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('01d63259-109f-4136-878d-77e503ac8a11', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('9c49472d-47fc-417e-b75a-512d57e76870', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('be9c4245-79db-40cd-a0d4-c750c3a822b6', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('0b8fa48f-6ccf-48ef-ac0b-3dadadad40bf', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('7d28fe21-466a-4e22-9851-374e9cb93cd9', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('db5033cf-c13f-47b1-a617-aea77a0d5864', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('8c047398-63a1-4940-a5c5-c44834f48516', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('885ade35-d310-421a-98b8-877e27e51531', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('ba3aaa33-9010-459f-acb5-5452788e9abc', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('c7e15bdd-a5f3-486d-8e3d-f3117f39eb1a', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('53adbbff-f4d6-4bd7-8b90-475f57913c1a', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('329b49fc-de79-4d63-97ca-87a8f83ef1e2', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('29f4224d-6b91-4218-aed6-0db3e5fa9dc2', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('658b6fce-40b0-4f05-a2da-2fd3e33684fb', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('b3418862-26a6-4bbb-b546-c12f48c45b16', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('26bc2583-1c9f-4d6e-9968-e5aa0e8ab82f', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('6c3f4121-65c2-444e-9d5a-f16f47fd2ed5', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('89dd6672-dd42-470b-8e84-129e4ec7540c', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('98ccd4dc-86a8-4652-b2c1-5b83b6f078e1', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('3953e924-30f6-4561-8e02-e761b417c1d4', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('02fc1261-b7d6-4d85-89ef-c987ab92f3d4', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('29acda13-a41f-4270-9248-375814889f20', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('a2b0eaca-aa24-4036-b730-265a97043b75', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('78b58f38-9075-44a1-8eb4-5ab0ba4b801d', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('d9bd086d-030c-4ca4-b6d2-29c2fbf517c8', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('7c775873-1ebf-4574-8cb1-29b0c661b8f3', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('0ee54310-5f4d-4435-9c34-cf93f742e101', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('ca07715c-696e-4a62-af10-74145ff818f5', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('06c5d5cc-5c29-4a74-be75-dfba20cc4f80', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('9167d0da-69ec-40a5-b7f8-5eab25833d70', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('3b3a9b48-63aa-4523-be3a-6a39fdf4bda7', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('28343b10-ce82-4c1f-aef2-f7d95316b48e', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('cf3a2b5f-9d7a-4f2c-ba39-abd290230b5b', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('3e74edee-f076-45b3-8247-a5dd19cb24b2', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('78185c7d-f353-49ee-b1e2-c2a0bcfc4ed2', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('96ec8c86-c024-4d03-a283-49375e43e086', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('b5c458ea-3a4e-4211-afc9-82510c2cff46', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('adcaac7d-a028-4d33-9111-ef3e711637e7', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('ccb661e2-6c0d-4020-9eb2-abd290230b5b', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('712b29e2-411b-4ef8-8f81-6cae15222c07', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('662ffad9-7dd3-490f-93d2-efb92f74c5ae', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('b244a2fb-1f27-4e6d-8f43-7e512798f299', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('84c81b22-765b-4edb-a6e7-c626151e0af8', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('c699fdf0-f31e-45c0-9d0d-cee2388e1544', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('5778b4ba-4acd-4c94-9c10-d83d80f75d50', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('38b1dd17-c3ff-46c4-b300-2e1c7d542abe', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('f619a8fd-fff8-4981-8947-48ebaaad993c', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('60e3ca01-0b7a-4785-acd7-3dddad0eea8e', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('36531ec5-477c-4d74-8d84-43276359aa14', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('a7e45f3a-e408-4593-9aba-0a724c5ebf26', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('9fee292c-8c59-4a99-a3c2-467717a22c70', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('87ae00d9-3fc7-4b9b-ac8b-48b79cbf8f65', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('88507c9e-a398-4195-8398-5c11a8b50e3b', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('4ab39621-ef37-4586-89d1-bc70fe40ba4f', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('3636eb56-7f9e-42af-aca8-5c90a7174f11', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('f6216359-3796-44ae-ab87-f24e6763b262', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('2f13e077-701a-43c0-89ee-3138a9ebccc5', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('42478c19-ff9e-4906-89a3-a43ea3026062', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('8de36b35-0eb8-471e-b7d8-7d1d24750715', NULL, NULL);
-INSERT INTO public.knowledge_artifact (id, creation_date, last_modified_at) VALUES ('3719ea28-fe32-4f7c-9177-8a2cb726185c', NULL, NULL);
 
 
 --
--- TOC entry 3306 (class 0 OID 16388)
+-- TOC entry 3296 (class 0 OID 16392)
 -- Dependencies: 202
 -- Data for Name: algorithm; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
-INSERT INTO public.algorithm (acronym, algo_parameter, assumptions, computation_model, input_format, intent, name, output_format, problem, solution, id) VALUES (NULL, NULL, NULL, 1, NULL, NULL, 'Initialization', NULL, NULL, NULL, '9829e814-a707-479f-80c7-8b49ffa543bc');
-INSERT INTO public.algorithm (acronym, algo_parameter, assumptions, computation_model, input_format, intent, name, output_format, problem, solution, id) VALUES (NULL, NULL, NULL, 1, NULL, NULL, 'Uniform Superposition', NULL, NULL, NULL, '52ae7837-58e1-47b2-bda3-4134597ef138');
+INSERT INTO public.algorithm (acronym, algo_parameter, assumptions, computation_model, input_format, intent, name, output_format, problem, solution, id) VALUES ('VQE', '* Anz. Qubits/Breite ($w$) des Schaltkreises: $w=n$
+ * Tiefe ($d$) des Schaltkreises: abhängig von der gewählten Verschränkungsmethode, exemplarisch für die besprochene:
+
+\$\$
+d_{ent} = (2n+1)m~,~d_{rot} = m+1
+\Rightarrow d = d_{ent} + d_{rot} = 2m(n+1)
+\$\$', NULL, 1, '* quadratische $n\times n$ Matrix A (als Ausgangspunkt)
+* Gewünschte Anzahl von Verschränkungen $m$
+* $n(m+1)$ Drehwinkel
+* Anzahl klassischer Optimierungsschritte $k$', '>Der VQE Algorithmus [[1]](https://arxiv.org/abs/1304.3061)[[2]](https://arxiv.org/abs/1304.3061) ist ein heuristischer hybrider Quanten-Algorithmus, mit welchem der kleinste (oder größte) Eigenwert inklusive Eigenvektor einer (meist) großen Matrix sehr gut angenähert werden kann. Hierbei wird ein quantenmechanischer Zustand auf einem NISQ-Rechner auf Basis von vorgegebenen Parametern präpariert und in der computational basis ($|0\rangle$ und  $|1\rangle$) gemessen. Das Ergebnis kann durch eine Kosten-Funktion ein Wert zugeordnet werden, welchen es zu minimieren  (oder maximieren) gilt. Ein klassischer Optimierungsalgorithmus verändert auf Grundlage des Wertes der Kosten-Funktion die gegebenen Parameter, durch welche wiederum ein Zustand auf dem Quantencomputer vorbereitet wird. Durch geeignetes Vorgehen bei der Zustandspräparierung und der klassischen Optimierung können Speedups erreicht werden.', 'Variational Quantum Eigensolver', '* n-dimensionaler Vektor $|\psi_F\rangle$ (von zuletzt erhaltenen Optimierungsparametern abhängige Wellenfunktion)
+* Skalarer Eigenwert durch Berechnung des Erwartungswertes $\langle\psi_F|A|\psi_F\rangle$', 'Viele wirtschaftlich relevante Fragestellungen der Neuzeit lassen sich als Optimierungsprobleme auffassen. So behandelt man beim Traveling-Salesman-Problem (TSP) die Aufgabe, eine Person zwischen verschiedenen Standorten mit gegebenen Distanzen möglichst effizient (z.B. möglichst schnell) reisen zu lassen. Solche und ähnliche Fragestellungen können als sogenanntes *Eigenwert-Problem* kodiert werden, in welchem bei gegebener Matrix $A$ Zahlen $\lambda_i$ und Vektoren $v_i$ gefunden werden sollen, sodass Folgendes gilt:
+\$\$
+Av_i = \lambda_iv_i
+\$\$
+Bei Optimierungsproblemen kann dies oft auf das Finden des größten bzw. kleinsten Eigenwertes und des dazugehörigen Eigenvektors beschränkt werden. Der Einsatz von variationellen Methoden wie dem VQE kann vor Allem bei quantenmechanischen Problemen, beispielsweise bei der Simulation von Molekülen in der Medikamentenforschung eingesetzt werden. [[3]](https://www.nature.com/articles/s41467-019-10988-2)
+Quantenmechanisch übersetzt, wird der VQE dafür genutzt, den Energie-Grundzustand (niedrigster Eigenwert) eines Hamiltonoperators (Matrix) zu berechnen, welcher das System beschreibt. In der folgenden Beschreibung des Algorithmus'' wird auch auf die Mathematik und auf ein spezielles Vorgehen beim Präparierungsprozess eingegangen.', '## *Beschreibung des Algorithmus*
+Der Algorithmus besteht aus der häufigen Wiederholung der folgenden Schritte, wobei QC quantenmechanische und PC klassische Anteile des Algorithmus beschreibt:
+1. Präparierung eines Zustandes auf Grundlage von (Anfangs-)Parametern (QC)
+2. Messung des Zustandes in der computational basis (QC)
+3. Berechnung des Energie-Erwartungswertes mit diesem Zustand (PC)
+4. Klassische Optimierung der Parameter basierend auf den Ergebnissen aus Schritt 3. (PC)
+
+Auf Schritt 4 folgt wiederum Schritt 1 mit den neu erhaltenen Parametern.
+### 1. Präparierung
+Schon der erste Schritt beinhaltet seine Tücken. Die Zustandspräparierung ist nämlich der wichtigste Teil, durch welchen Speedups des Algorithmus'' gegenüber klassischer Alternativen erreicht werden könnten. In diesem Abschnitt wird eine sehr generische Zustandspräparierung behandelt, anhand derer das Konzept verdeutlicht werden soll. Die hier vorgestellte Zustandspräparierung von $n$ Qubits sieht wie folgt aus:
+
+\$\$
+|\psi\rangle = \big(U_\text{ent}U_\text{rot}(\vec{\theta})\big)^m|0\rangle^n
+\$\$
+
+Hierbei ist $U_\text{ent}$ ein Verschränkungsoperator, $U_\text{rot}$ ein Rotationsoperator und $m$ die (variable) Anzahl von (erneuten) Verschränkungen/Rotationen. Wie bei universellen Quantencomputern üblich, wird davon ausgegangen, dass die Qubits alle im Zustand $|0\rangle$ initialisiert werden können. Auf die einzelnen Bestandteile des Algorithmus wird im Folgenden eingegangen.<br><br>
+#### Verschränkung $U_{ent}$
+Quantencomputer haben unter anderem den Vorteil, dass durch Verschränkung ein hohe Anzahl parallel ausführbarer Operationen ermöglicht wird. Das wird auch hier bei der Zustandspräparierung ausgenutzt, bei welcher alle beteiligten Qubits miteinander verschränkt werden sollen. Formal ist die leichteste Form der Verschränkung zweier Qubits im $|0\rangle$-Zustand durch die Hintereinanderausführung eines Hadamard-Gatters auf das Control-Qubit und eines CNOT-Gatters zu realisieren:
+
+\$\$
+C_N(H\otimes\mathbb{I})|00\rangle=\frac{1}{\sqrt{2}}\big(|00\rangle+|11\rangle\big)\Rightarrow~\text{test}
+\$\$
+
+Bei mehreren Qubits gibt es verschiedenste Arten, diese miteinander zu verschränken. Hier soll eine ''lineare Verschränkung'' zwischen den Qubits gezeigt werden, bei welcher q0 mit q1, q1 mit q2 usw. verschränkt wird. In einem Quantenschaltkreis mit 4 Qubits könnte das wie folgt aussehen (die Hadamard-Gatter am Ende des Schaltkreises dienen lediglich dazu, den Basiswechsel vollständig auszuführen):
+
+\begin{quantikz}
+\lstick{$q_0:~\ket{0}$}\slice[style = black]{} & \gate{H} & \ctrl{1} &\qw &\qw &\qw &\qw & \gate{H}\slice[style = black]{} & \qw\\
+\lstick{$q_1:~\ket{0}$} & \qw  & \targ{} & \gate{H} & \ctrl{1} &\qw &\qw & \gate{H} & \qw\\
+\lstick{$q_2:~\ket{0}$} &\qw &\qw &\qw & \targ{} & \gate{H} & \ctrl{1} & \gate{H} & \qw \\
+\lstick{$q_3:~\ket{0}$} &\qw &\qw &\qw &\qw &\qw & \targ{} & \qw & \qw
+\end{quantikz}
+
+Abhängig von der gewählten Tiefe $m$ wird die gewählte Verschränkung dementsprechend wiederholt.
+#### Rotation $U_{rot}$
+Die Matrizen, die Drehungen (auf der Blochsphäre) der einzelnen Qubits beschreiben, stellen den eigentlich zu optimierenden Teil dar. Diese Drehungen hängen von Winkeln ab, welche die zu optimierenden Parameter sind. In diesem Beispiel werden 1-Qubit $R_Y$-Dreh-Matrizen verwendet, welche wie folgt aussehen:
+
+\$\$
+R_Y(\theta)=\exp\big(-i\theta\sigma_y/2\big)=\cos(\theta/2)\mathbb{1}-i\sin(\theta/2)\sigma_y=\begin{pmatrix}
+\cos(\theta/2) & -\sin(\theta/2) \\ \sin(\theta/2) & \cos(\theta/2)
+\end{pmatrix}
+\$\$
+
+$\sigma_y$ bezeichnet die Pauli-y-Matrix und kann für analoge Drehungen um x- und z-Achse durch eben jene ersetzt werden. In diesem Beispiel wurde eine Drehung um die y-Achse der Bloch-Sphäre gewählt, da die dabei entstehenden Drehmatrizen keine komplexen Einträge enthalten, die bei der Berechnung eines reellen Erwartungswertes hinderlich sein könnten.
+Um die Verschränkung vollständig nutzen zu können, werden sowohl vor, als auch nach dieser Drehungen stattfinden, weswegen bei der Tiefe $m$ des Schaltkreises $n(m+1)$ Winkel bzw. Parameter gebraucht werden. Für $m=1$ und $n=4$ werden somit 8 Winkel benötigt und die Implementierung in den Schaltkreis kann in folgender Grafik gesehen werden:
+
+\begin{quantikz}
+\lstick{$q_0:~\ket{0}$} & \gate{R_Y(\theta_1)}\slice[style = black]{} & \gate{H} & \ctrl{1} &\qw &\qw &\qw &\qw & \gate{H}\slice[style = black]{} & \gate{R_Y(\theta_5)} &\qw\\
+\lstick{$q_1:~\ket{0}$} & \gate{R_Y(\theta_2)} & \qw  & \targ{} & \gate{H} & \ctrl{1} &\qw &\qw & \gate{H} & \gate{R_Y(\theta_6)} & \qw\\
+\lstick{$q_2:~\ket{0}$} & \gate{R_Y(\theta_3)} &\qw &\qw &\qw & \targ{} & \gate{H} & \ctrl{1} & \gate{H} & \gate{R_Y(\theta_7)} & \qw \\
+\lstick{$q_3:~\ket{0}$} & \gate{R_Y(\theta_4)} &\qw &\qw &\qw &\qw &\qw & \targ{} & \qw & \gate{R_Y(\theta_8)} &\qw
+\end{quantikz}
+
+### 2. - 4. Messung, Erwartungswertberechnung und Optimierung
+Die Messung des Zustandes erfolgt in der computational basis und hängt von der ausgewählten Optimierungsstrategie ab. Im Fall des Einsatzes von *simultaneous perturbation stochastic approximation* (SPSA) [[4]](https://arxiv.org/abs/1704.05018) werden für einen Optimierungsschritt der Parameter zwei Zustände und die dazugehörigen Erwartungswerte benötigt, weshalb für einen Durchlauf des Algorithmus'' Schritt 1,2 und 3 zweimal ausgeführt werden müssen, bevor die eigentliche Optimierung stattfinden kann.
+Nach der gewünschten Anzahl der Iterationsschritte (für die klassische Optimierung) erhält man ein finales Set von Parametern $\theta_F$, welche für die Berechnung der finalen Wellenfunktion $|\psi_F\rangle$ genutzt wird. Diese ist dann (bei genügend Iterationsschritten und bei vernünftiger Berechnung) ein Eigenzustand/-vektor der Matrix $A$. Der dazugehörige (minimalste) Eigenwert berechnet sich durch den Erwartungswert $\lambda_{min}=\langle\psi_F|A|\psi_F\rangle$.
+
+### Referenzen
+* [1] Peruzzo, A. et. al., https://arxiv.org/abs/1304.3061 (2013)
+* [2] McClear, J.R. et. al., https://arxiv.org/abs/1509.04279 (2015)
+* [3] Grimsle, H.R. et. al., https://www.nature.com/articles/s41467-019-10988-2 (2019)
+* [4] Kandala, A. et. al., https://www.nature.com/articles/s41467-019-10988-2 (2017)', '379ec44e-1ce5-11eb-adf2-0242ac160002');
+INSERT INTO public.algorithm (acronym, algo_parameter, assumptions, computation_model, input_format, intent, name, output_format, problem, solution, id) VALUES (NULL, 'N: N > 0, N odd', NULL, 1, 'N: Integer', 'Integer factorization', 'Shor', 'Factors: Integer Array', 'The algorithm of Shor is a ploynomial-time quantum computer algorithm for factorizing integers. It solves the following problem: GIven an integer N, find its prime factors. The American mathematician Peter Shor invented the algorithm in 1994.', NULL, 'b5df6c13-e619-496c-ada0-80fc3486f733');
+INSERT INTO public.algorithm (acronym, algo_parameter, assumptions, computation_model, input_format, intent, name, output_format, problem, solution, id) VALUES ('QPE', 'U: Unitary Matrix; Eigenvector: Eigenvector of U', NULL, 1, 'U: Float Array; Eigenvector: Integer Array', 'Estimates eigenvalues, or phase, of an eigenvector of a unitary matrix', 'Quantum Phase Estimation', 'Eigenvalue: Float', 'The quantum phase estimation algorithm estimates the eigenvalues, or phase, of an eigenvector of a unitary matrix. It is frequently used as a subroutine in other quantum algorithms, such as the algorithm of Shor.', NULL, 'b61578ed-df66-44ec-954c-9bcf9906f490');
+INSERT INTO public.algorithm (acronym, algo_parameter, assumptions, computation_model, input_format, intent, name, output_format, problem, solution, id) VALUES ('QRL1', NULL, NULL, 1, NULL, 'Reinforcement learning', 'Quantum Reinforcement Learning 1', NULL, 'With this algorithm, Dong et al. introduce an approach to quantum reinforcement learning (QRL) that takes advantage of effects from quantum physics and works fundamentally different than any classical RL method, however, some similarities still remain. For example, QRL, like classical RL methods, also contain a policy, reward function and an environment. However, Dong et al. note that their QRL algorithm differs to classical RL algorithms in intrinsic parts like representation, policy, parallelism and update operation. States and actions are also different in both approaches. In this QRL method, states are referred to as eigen states and actions as eigen actions and are able to be in a superposition state. Superposition allows the algorithm, among other things, to better balance exploration and exploitation. Recall that in quantum physics, whenever a qubit in superposition is measured, it collapses and takes on one state according to some probability. The algorithm takes advantage of this behaviour in the action selection policy. More specifically, an action is measured in relation to some state and hence collapses to one of its eigen actions according to some probability this action is then selected. This means that the probability of actions that are considered good should be amplified. The probability amplitudes must be updated throughout the algorithm. The method to update the probability amplitude is based on the Grover iteration from Grover’s algorithm, a famous quantum algorithm for database search. The method contains a oracle or black box that is used to tell whether an action is good or bad. Loosely formulated, the complete algorithm works as follows. The first step is to initialize the state and action. After this an action is observed and executed to receive the next state and reward. Then the state value and probability amplitudes are updated accordingly. The probability amplitudes are updated in such a way that the probability for good actions is amplified and shrunk for bad ones. This process is done repeatedly. And so, after a number of episodes, the algorithm is able to learn a policy.', NULL, '4ab28e22-cdf9-45f8-b872-f4d9d2757b6d');
+INSERT INTO public.algorithm (acronym, algo_parameter, assumptions, computation_model, input_format, intent, name, output_format, problem, solution, id) VALUES ('QSVM1', NULL, NULL, 1, NULL, 'Classification', 'Quantum Support Vector Machine 1', NULL, 'Havlicek et al. show that a quantum version of the SVM can be implemented in the following way. Two distinct approaches are available for this problem. The first method uses a variational circuit to compute the separating hyperplane while the second method estimates the kernel function in order to optimize the classifier directly. The latter method is then used used as part of a conventional SVM. In both methods the data is provided classically while the quantum state space is used as the feature space. It is furthermore noted that in order to obtain a quantum advantage, the kernel cannot be estimated classically, i.e., if the kernel is too simple, the quantum SVM does not show a quantum advantage over a normal SVM. [Supervised learning with quantum enhanced feature spaces, Havlicek et al.]', NULL, '16aa96c5-b668-4df9-a03f-96d323708676');
+INSERT INTO public.algorithm (acronym, algo_parameter, assumptions, computation_model, input_format, intent, name, output_format, problem, solution, id) VALUES ('QSVM2', NULL, NULL, 1, NULL, 'Classification', 'Quantum Support Vector Machine 2', NULL, 'The training of quantum support vector machines (QSVM) can also be run on a quantum annealer, as demonstrated by Willsch et al. in a recent paper. To achieve this, the problem, like any problem solved via quantum annealing (QA), must first be formulated as a QUBO. However, the training of SVMs entails solving equations that contain real numbers whereas a QUBO consists of binary values. Willsch et al. use a special encoding to overcome this and thus are able to formulate the problem as a QUBO. Willsch et al. investigate the performance of their QSVM on a DW2000Q quantum annealer. They note that the quantum annealer returns in addition to the global optimum, a range of solutions that are close to the optimal. They furthermore note that this is advantageous as the generalization ability may potentially be improved by using a combination of the produced solutions. In summary, a QVSM can be trained using via QA by formulating the problem as a QUBO. A QA device, such as the DW2000Q, produces optimal and near-optimal solutions and a combination of these solutions can potentially improve the generalization behaviour.', NULL, '9aa16271-6ea1-4e15-ad9d-6e6e264a0ad0');
+INSERT INTO public.algorithm (acronym, algo_parameter, assumptions, computation_model, input_format, intent, name, output_format, problem, solution, id) VALUES (NULL, NULL, NULL, 1, NULL, NULL, 'Grover-SAT', NULL, NULL, NULL, '3c7722e2-09c3-4667-9a0d-a45d3ddc42ae');
+INSERT INTO public.algorithm (acronym, algo_parameter, assumptions, computation_model, input_format, intent, name, output_format, problem, solution, id) VALUES (NULL, NULL, NULL, 1, NULL, NULL, 'Grover-Truthtable', NULL, NULL, NULL, '0e5af2cf-f3c8-48dd-9743-cfdea65f320f');
+INSERT INTO public.algorithm (acronym, algo_parameter, assumptions, computation_model, input_format, intent, name, output_format, problem, solution, id) VALUES (NULL, NULL, NULL, 1, NULL, NULL, 'Simon', NULL, NULL, NULL, '871f7eea-4722-4728-8cd9-1e61fe2dd285');
 
 
 --
--- TOC entry 3315 (class 0 OID 16424)
+-- TOC entry 3305 (class 0 OID 16428)
 -- Dependencies: 211
 -- Data for Name: application_area; Type: TABLE DATA; Schema: public; Owner: planqk
 --
@@ -251,7 +146,7 @@ INSERT INTO public.application_area (id, name) VALUES ('da982d08-30a8-48f7-8db1-
 
 
 --
--- TOC entry 3307 (class 0 OID 16394)
+-- TOC entry 3297 (class 0 OID 16398)
 -- Dependencies: 203
 -- Data for Name: algorithm_application_area; Type: TABLE DATA; Schema: public; Owner: planqk
 --
@@ -259,15 +154,15 @@ INSERT INTO public.application_area (id, name) VALUES ('da982d08-30a8-48f7-8db1-
 
 
 --
--- TOC entry 3342 (class 0 OID 16534)
--- Dependencies: 238
+-- TOC entry 3330 (class 0 OID 16532)
+-- Dependencies: 236
 -- Data for Name: learning_method; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3308 (class 0 OID 16397)
+-- TOC entry 3298 (class 0 OID 16401)
 -- Dependencies: 204
 -- Data for Name: algorithm_learning_method; Type: TABLE DATA; Schema: public; Owner: planqk
 --
@@ -275,8 +170,8 @@ INSERT INTO public.application_area (id, name) VALUES ('da982d08-30a8-48f7-8db1-
 
 
 --
--- TOC entry 3345 (class 0 OID 16546)
--- Dependencies: 241
+-- TOC entry 3333 (class 0 OID 16544)
+-- Dependencies: 239
 -- Data for Name: problem_type; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
@@ -284,16 +179,17 @@ INSERT INTO public.problem_type (id, name, parent_problem_type) VALUES ('76d773b
 
 
 --
--- TOC entry 3309 (class 0 OID 16400)
+-- TOC entry 3299 (class 0 OID 16404)
 -- Dependencies: 205
 -- Data for Name: algorithm_problem_type; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
+INSERT INTO public.algorithm_problem_type (algorithm_id, problem_type_id) VALUES ('b5df6c13-e619-496c-ada0-80fc3486f733', '76d773b5-4635-4d67-877c-e565b9f08496');
 
 
 --
--- TOC entry 3346 (class 0 OID 16549)
--- Dependencies: 242
+-- TOC entry 3334 (class 0 OID 16547)
+-- Dependencies: 240
 -- Data for Name: publication; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
@@ -304,15 +200,20 @@ INSERT INTO public.publication (doi, title, url, id) VALUES ('10.1016/j.cpc.2019
 
 
 --
--- TOC entry 3310 (class 0 OID 16403)
+-- TOC entry 3300 (class 0 OID 16407)
 -- Dependencies: 206
 -- Data for Name: algorithm_publication; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
+INSERT INTO public.algorithm_publication (algorithm_id, publication_id) VALUES ('b5df6c13-e619-496c-ada0-80fc3486f733', 'f05c9136-2f9f-433f-9c35-85009111ee3c');
+INSERT INTO public.algorithm_publication (algorithm_id, publication_id) VALUES ('b61578ed-df66-44ec-954c-9bcf9906f490', 'f05c9136-2f9f-433f-9c35-85009111ee3c');
+INSERT INTO public.algorithm_publication (algorithm_id, publication_id) VALUES ('4ab28e22-cdf9-45f8-b872-f4d9d2757b6d', '87d697a4-6256-4f84-b545-c2024ab380c2');
+INSERT INTO public.algorithm_publication (algorithm_id, publication_id) VALUES ('16aa96c5-b668-4df9-a03f-96d323708676', '3aac6a37-10de-4a95-a2bd-381d357df2a4');
+INSERT INTO public.algorithm_publication (algorithm_id, publication_id) VALUES ('9aa16271-6ea1-4e15-ad9d-6e6e264a0ad0', 'ae6bdf6f-2656-45bd-9b96-0820eea3cdab');
 
 
 --
--- TOC entry 3312 (class 0 OID 16409)
+-- TOC entry 3302 (class 0 OID 16413)
 -- Dependencies: 208
 -- Data for Name: algorithm_relation_type; Type: TABLE DATA; Schema: public; Owner: planqk
 --
@@ -320,7 +221,7 @@ INSERT INTO public.publication (doi, title, url, id) VALUES ('10.1016/j.cpc.2019
 
 
 --
--- TOC entry 3311 (class 0 OID 16406)
+-- TOC entry 3301 (class 0 OID 16410)
 -- Dependencies: 207
 -- Data for Name: algorithm_relation; Type: TABLE DATA; Schema: public; Owner: planqk
 --
@@ -328,8 +229,8 @@ INSERT INTO public.publication (doi, title, url, id) VALUES ('10.1016/j.cpc.2019
 
 
 --
--- TOC entry 3352 (class 0 OID 16570)
--- Dependencies: 248
+-- TOC entry 3340 (class 0 OID 16568)
+-- Dependencies: 246
 -- Data for Name: revinfo; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
@@ -343,8 +244,8 @@ INSERT INTO public.revinfo (rev, revtstmp) VALUES (7, 1698656617204);
 
 
 --
--- TOC entry 3341 (class 0 OID 16531)
--- Dependencies: 237
+-- TOC entry 3329 (class 0 OID 16529)
+-- Dependencies: 235
 -- Data for Name: knowledge_artifact_revisions; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
@@ -364,7 +265,7 @@ INSERT INTO public.knowledge_artifact_revisions (id, rev, revtype, creation_date
 
 
 --
--- TOC entry 3313 (class 0 OID 16415)
+-- TOC entry 3303 (class 0 OID 16419)
 -- Dependencies: 209
 -- Data for Name: algorithm_revisions; Type: TABLE DATA; Schema: public; Owner: planqk
 --
@@ -374,8 +275,8 @@ INSERT INTO public.algorithm_revisions (id, rev, acronym, algo_parameter, assump
 
 
 --
--- TOC entry 3357 (class 0 OID 16591)
--- Dependencies: 253
+-- TOC entry 3345 (class 0 OID 16589)
+-- Dependencies: 251
 -- Data for Name: tag; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
@@ -386,15 +287,20 @@ INSERT INTO public.tag (value, category) VALUES ('Factorization', 'Algorithm cla
 
 
 --
--- TOC entry 3314 (class 0 OID 16421)
+-- TOC entry 3304 (class 0 OID 16425)
 -- Dependencies: 210
 -- Data for Name: algorithm_tag; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
+INSERT INTO public.algorithm_tag (algorithm_id, tag_value) VALUES ('b61578ed-df66-44ec-954c-9bcf9906f490', 'Phase Estimation');
+INSERT INTO public.algorithm_tag (algorithm_id, tag_value) VALUES ('4ab28e22-cdf9-45f8-b872-f4d9d2757b6d', 'Reinforcement learning');
+INSERT INTO public.algorithm_tag (algorithm_id, tag_value) VALUES ('16aa96c5-b668-4df9-a03f-96d323708676', 'Classification');
+INSERT INTO public.algorithm_tag (algorithm_id, tag_value) VALUES ('9aa16271-6ea1-4e15-ad9d-6e6e264a0ad0', 'Classification');
+INSERT INTO public.algorithm_tag (algorithm_id, tag_value) VALUES ('b5df6c13-e619-496c-ada0-80fc3486f733', 'Factorization');
 
 
 --
--- TOC entry 3316 (class 0 OID 16427)
+-- TOC entry 3306 (class 0 OID 16431)
 -- Dependencies: 212
 -- Data for Name: classic_algorithm; Type: TABLE DATA; Schema: public; Owner: planqk
 --
@@ -402,7 +308,7 @@ INSERT INTO public.tag (value, category) VALUES ('Factorization', 'Algorithm cla
 
 
 --
--- TOC entry 3317 (class 0 OID 16430)
+-- TOC entry 3307 (class 0 OID 16434)
 -- Dependencies: 213
 -- Data for Name: classic_algorithm_revisions; Type: TABLE DATA; Schema: public; Owner: planqk
 --
@@ -410,15 +316,15 @@ INSERT INTO public.tag (value, category) VALUES ('Factorization', 'Algorithm cla
 
 
 --
--- TOC entry 3333 (class 0 OID 16498)
--- Dependencies: 229
+-- TOC entry 3321 (class 0 OID 16496)
+-- Dependencies: 227
 -- Data for Name: implementation; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3318 (class 0 OID 16433)
+-- TOC entry 3308 (class 0 OID 16437)
 -- Dependencies: 214
 -- Data for Name: classic_implementation; Type: TABLE DATA; Schema: public; Owner: planqk
 --
@@ -426,8 +332,8 @@ INSERT INTO public.tag (value, category) VALUES ('Factorization', 'Algorithm cla
 
 
 --
--- TOC entry 3337 (class 0 OID 16516)
--- Dependencies: 233
+-- TOC entry 3325 (class 0 OID 16514)
+-- Dependencies: 231
 -- Data for Name: implementation_revisions; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
@@ -445,7 +351,7 @@ INSERT INTO public.implementation_revisions (id, rev, assumptions, contributors,
 
 
 --
--- TOC entry 3319 (class 0 OID 16436)
+-- TOC entry 3309 (class 0 OID 16440)
 -- Dependencies: 215
 -- Data for Name: classic_implementation_revisions; Type: TABLE DATA; Schema: public; Owner: planqk
 --
@@ -453,7 +359,7 @@ INSERT INTO public.implementation_revisions (id, rev, assumptions, contributors,
 
 
 --
--- TOC entry 3320 (class 0 OID 16439)
+-- TOC entry 3310 (class 0 OID 16443)
 -- Dependencies: 216
 -- Data for Name: cloud_service; Type: TABLE DATA; Schema: public; Owner: planqk
 --
@@ -463,19 +369,19 @@ INSERT INTO public.cloud_service (id, cost_model, description, name, provider, u
 
 
 --
--- TOC entry 3322 (class 0 OID 16448)
+-- TOC entry 3312 (class 0 OID 16452)
 -- Dependencies: 218
 -- Data for Name: compute_resource; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
-INSERT INTO public.compute_resource (dtype, id, name, quantum_computation_model, technology, vendor, qprov_origin) VALUES ('ComputeResource', 'faea0025-9096-4582-b2f9-93096358dbc2', 'ibmq_16_melbourne', 0, '', 'IBMQ', NULL);
-INSERT INTO public.compute_resource (dtype, id, name, quantum_computation_model, technology, vendor, qprov_origin) VALUES ('ComputeResource', 'c0fc8141-4d19-4654-910b-109882b4b99b', 'ibmqx2', 0, NULL, 'IBMQ', NULL);
-INSERT INTO public.compute_resource (dtype, id, name, quantum_computation_model, technology, vendor, qprov_origin) VALUES ('ComputeResource', '2e683cee-8363-4327-8765-3b5f957acc90', 'Rigetti 19Q', 0, 'Superconducting', 'Rigetti', NULL);
-INSERT INTO public.compute_resource (dtype, id, name, quantum_computation_model, technology, vendor, qprov_origin) VALUES ('ComputeResource', '82df8861-b7de-464d-9dab-4adabbe78cd2', 'Rigetti 8Q', 0, 'Superconducting', 'Rigetti', NULL);
+INSERT INTO public.compute_resource (dtype, id, name, quantum_computation_model, technology, vendor) VALUES ('ComputeResource', 'faea0025-9096-4582-b2f9-93096358dbc2', 'ibmq_16_melbourne', 0, '', 'IBMQ');
+INSERT INTO public.compute_resource (dtype, id, name, quantum_computation_model, technology, vendor) VALUES ('ComputeResource', 'c0fc8141-4d19-4654-910b-109882b4b99b', 'ibmqx2', 0, NULL, 'IBMQ');
+INSERT INTO public.compute_resource (dtype, id, name, quantum_computation_model, technology, vendor) VALUES ('ComputeResource', '2e683cee-8363-4327-8765-3b5f957acc90', 'Rigetti 19Q', 0, 'Superconducting', 'Rigetti');
+INSERT INTO public.compute_resource (dtype, id, name, quantum_computation_model, technology, vendor) VALUES ('ComputeResource', '82df8861-b7de-464d-9dab-4adabbe78cd2', 'Rigetti 8Q', 0, 'Superconducting', 'Rigetti');
 
 
 --
--- TOC entry 3321 (class 0 OID 16445)
+-- TOC entry 3311 (class 0 OID 16449)
 -- Dependencies: 217
 -- Data for Name: cloud_services_compute_resources; Type: TABLE DATA; Schema: public; Owner: planqk
 --
@@ -487,7 +393,7 @@ INSERT INTO public.cloud_services_compute_resources (cloud_service_id, compute_r
 
 
 --
--- TOC entry 3324 (class 0 OID 16457)
+-- TOC entry 3314 (class 0 OID 16461)
 -- Dependencies: 220
 -- Data for Name: compute_resource_property_type; Type: TABLE DATA; Schema: public; Owner: planqk
 --
@@ -498,7 +404,7 @@ INSERT INTO public.compute_resource_property_type (id, datatype, description, na
 
 
 --
--- TOC entry 3323 (class 0 OID 16454)
+-- TOC entry 3313 (class 0 OID 16458)
 -- Dependencies: 219
 -- Data for Name: compute_resource_property; Type: TABLE DATA; Schema: public; Owner: planqk
 --
@@ -518,108 +424,90 @@ INSERT INTO public.compute_resource_property (id, value, algorithm_id, compute_r
 
 
 --
--- TOC entry 3325 (class 0 OID 16463)
+-- TOC entry 3315 (class 0 OID 16467)
 -- Dependencies: 221
--- Data for Name: concrete_solution; Type: TABLE DATA; Schema: public; Owner: planqk
+-- Data for Name: concrete_solutions; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
-INSERT INTO public.concrete_solution (id, name, concrete_solution_type, description, pattern, is_start_pattern, is_end_pattern, qubit_count, input_parameter_format, has_header, has_measurment) VALUES ('88507c9e-a398-4195-8398-5c11a8b50e3b', NULL, 0, NULL, '3d1f3991-df47-4d42-8f9a-e6dcf4e3ccec', true, true, 3, NULL, true, true);
-INSERT INTO public.concrete_solution (id, name, concrete_solution_type, description, pattern, is_start_pattern, is_end_pattern, qubit_count, input_parameter_format, has_header, has_measurment) VALUES ('3636eb56-7f9e-42af-aca8-5c90a7174f11', NULL, 0, NULL, '2229a430-fe92-4411-9d72-d10dd1d8da14', true, false, 3, NULL, true, true);
-INSERT INTO public.concrete_solution (id, name, concrete_solution_type, description, pattern, is_start_pattern, is_end_pattern, qubit_count, input_parameter_format, has_header, has_measurment) VALUES ('2f13e077-701a-43c0-89ee-3138a9ebccc5', NULL, 0, NULL, '2229a430-fe92-4411-9d72-d10dd1d8da14', true, false, 2, NULL, true, true);
-INSERT INTO public.concrete_solution (id, name, concrete_solution_type, description, pattern, is_start_pattern, is_end_pattern, qubit_count, input_parameter_format, has_header, has_measurment) VALUES ('8de36b35-0eb8-471e-b7d8-7d1d24750715', NULL, 0, NULL, '1cc7e9d6-ab37-412e-8afa-604a25de296e', false, true, 2, NULL, true, true);
 
 
 --
--- TOC entry 3329 (class 0 OID 16481)
--- Dependencies: 225
--- Data for Name: file; Type: TABLE DATA; Schema: public; Owner: planqk
+-- TOC entry 3348 (class 0 OID 17719)
+-- Dependencies: 254
+-- Data for Name: concrete_solutions_revisions; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
-INSERT INTO public.file (fileurl, mime_type, name, id) VALUES ('/opt/tomcat/temp/qc-atlas/[ENTANGLE]GHZ_3Q_QASM2.qasm', 'application/octet-stream', '[ENTANGLE]GHZ_3Q_QASM2.qasm', '4ab39621-ef37-4586-89d1-bc70fe40ba4f');
-INSERT INTO public.file (fileurl, mime_type, name, id) VALUES ('/opt/tomcat/temp/qc-atlas/[UNIFORMSUPER]IMPL_3Q_QASM2.qasm', 'application/octet-stream', '[UNIFORMSUPER]IMPL_3Q_QASM2.qasm', 'f6216359-3796-44ae-ab87-f24e6763b262');
-INSERT INTO public.file (fileurl, mime_type, name, id) VALUES ('/opt/tomcat/temp/qc-atlas/[UNIFORMSUPER]IMPL_2Q_QASM2.qasm', 'application/octet-stream', '[UNIFORMSUPER]IMPL_2Q_QASM2.qasm', '42478c19-ff9e-4906-89a3-a43ea3026062');
-INSERT INTO public.file (fileurl, mime_type, name, id) VALUES ('/opt/tomcat/temp/qc-atlas/[ORACLE]DEUTSCH_CNOT_2Q_QASM2.qasm', 'application/octet-stream', '[ORACLE]DEUTSCH_CNOT_2Q_QASM2.qasm', '3719ea28-fe32-4f7c-9177-8a2cb726185c');
 
 
 --
--- TOC entry 3326 (class 0 OID 16469)
--- Dependencies: 222
--- Data for Name: concrete_solution_file; Type: TABLE DATA; Schema: public; Owner: planqk
---
-
-INSERT INTO public.concrete_solution_file (file_id, concrete_solution_id, qasm_file_id) VALUES ('4ab39621-ef37-4586-89d1-bc70fe40ba4f', '88507c9e-a398-4195-8398-5c11a8b50e3b', NULL);
-INSERT INTO public.concrete_solution_file (file_id, concrete_solution_id, qasm_file_id) VALUES ('f6216359-3796-44ae-ab87-f24e6763b262', '3636eb56-7f9e-42af-aca8-5c90a7174f11', NULL);
-INSERT INTO public.concrete_solution_file (file_id, concrete_solution_id, qasm_file_id) VALUES ('42478c19-ff9e-4906-89a3-a43ea3026062', '2f13e077-701a-43c0-89ee-3138a9ebccc5', NULL);
-INSERT INTO public.concrete_solution_file (file_id, concrete_solution_id, qasm_file_id) VALUES ('3719ea28-fe32-4f7c-9177-8a2cb726185c', '8de36b35-0eb8-471e-b7d8-7d1d24750715', NULL);
-
-
---
--- TOC entry 3328 (class 0 OID 16475)
--- Dependencies: 224
+-- TOC entry 3317 (class 0 OID 16476)
+-- Dependencies: 223
 -- Data for Name: discussion_topic; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3327 (class 0 OID 16472)
--- Dependencies: 223
+-- TOC entry 3316 (class 0 OID 16473)
+-- Dependencies: 222
 -- Data for Name: discussion_comment; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3330 (class 0 OID 16487)
--- Dependencies: 226
--- Data for Name: file_concrete_solution; Type: TABLE DATA; Schema: public; Owner: planqk
+-- TOC entry 3318 (class 0 OID 16482)
+-- Dependencies: 224
+-- Data for Name: file; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3353 (class 0 OID 16573)
--- Dependencies: 249
+-- TOC entry 3341 (class 0 OID 16571)
+-- Dependencies: 247
 -- Data for Name: sketch; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3332 (class 0 OID 16492)
--- Dependencies: 228
+-- TOC entry 3320 (class 0 OID 16490)
+-- Dependencies: 226
 -- Data for Name: image; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3334 (class 0 OID 16504)
--- Dependencies: 230
+-- TOC entry 3322 (class 0 OID 16502)
+-- Dependencies: 228
 -- Data for Name: implementation_package; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3335 (class 0 OID 16510)
--- Dependencies: 231
+-- TOC entry 3323 (class 0 OID 16508)
+-- Dependencies: 229
 -- Data for Name: implementation_package_file; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3336 (class 0 OID 16513)
--- Dependencies: 232
+-- TOC entry 3324 (class 0 OID 16511)
+-- Dependencies: 230
 -- Data for Name: implementation_publication; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
+INSERT INTO public.implementation_publication (implementation_id, publication_id) VALUES ('e07898e3-280f-4701-9d54-7d051af8d448', 'f05c9136-2f9f-433f-9c35-85009111ee3c');
+INSERT INTO public.implementation_publication (implementation_id, publication_id) VALUES ('170eff66-733f-4043-a56b-3189bf474d62', 'f05c9136-2f9f-433f-9c35-85009111ee3c');
 
 
 --
--- TOC entry 3354 (class 0 OID 16579)
--- Dependencies: 250
+-- TOC entry 3342 (class 0 OID 16577)
+-- Dependencies: 248
 -- Data for Name: software_platform; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
@@ -628,40 +516,44 @@ INSERT INTO public.software_platform (id, licence, link, name, version) VALUES (
 
 
 --
--- TOC entry 3338 (class 0 OID 16522)
--- Dependencies: 234
+-- TOC entry 3326 (class 0 OID 16520)
+-- Dependencies: 232
 -- Data for Name: implementation_software_platforms; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3339 (class 0 OID 16525)
--- Dependencies: 235
+-- TOC entry 3327 (class 0 OID 16523)
+-- Dependencies: 233
 -- Data for Name: implementation_tag; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
+INSERT INTO public.implementation_tag (implementation_id, tag_value) VALUES ('b3b616b6-6e4a-49b1-baf7-f08fa962a441', 'Phase Estimation');
+INSERT INTO public.implementation_tag (implementation_id, tag_value) VALUES ('e07898e3-280f-4701-9d54-7d051af8d448', 'Factorization');
+INSERT INTO public.implementation_tag (implementation_id, tag_value) VALUES ('170eff66-733f-4043-a56b-3189bf474d62', 'Factorization');
+INSERT INTO public.implementation_tag (implementation_id, tag_value) VALUES ('1066e01c-e3ac-4830-b610-eb613187850c', 'Phase Estimation');
 
 
 --
--- TOC entry 3344 (class 0 OID 16543)
--- Dependencies: 240
+-- TOC entry 3332 (class 0 OID 16541)
+-- Dependencies: 238
 -- Data for Name: pattern_relation_type; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3343 (class 0 OID 16537)
--- Dependencies: 239
+-- TOC entry 3331 (class 0 OID 16535)
+-- Dependencies: 237
 -- Data for Name: pattern_relation; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3347 (class 0 OID 16555)
--- Dependencies: 243
+-- TOC entry 3335 (class 0 OID 16553)
+-- Dependencies: 241
 -- Data for Name: publication_authors; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
@@ -684,8 +576,8 @@ INSERT INTO public.publication_authors (publication_id, authors) VALUES ('ae6bdf
 
 
 --
--- TOC entry 3348 (class 0 OID 16558)
--- Dependencies: 244
+-- TOC entry 3336 (class 0 OID 16556)
+-- Dependencies: 242
 -- Data for Name: quantum_algorithm; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
@@ -694,8 +586,8 @@ INSERT INTO public.quantum_algorithm (nisq_ready, quantum_computation_model, spe
 
 
 --
--- TOC entry 3349 (class 0 OID 16561)
--- Dependencies: 245
+-- TOC entry 3337 (class 0 OID 16559)
+-- Dependencies: 243
 -- Data for Name: quantum_algorithm_revisions; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
@@ -704,65 +596,64 @@ INSERT INTO public.quantum_algorithm_revisions (id, rev, nisq_ready, quantum_com
 
 
 --
--- TOC entry 3350 (class 0 OID 16564)
--- Dependencies: 246
+-- TOC entry 3338 (class 0 OID 16562)
+-- Dependencies: 244
 -- Data for Name: quantum_implementation; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3351 (class 0 OID 16567)
--- Dependencies: 247
+-- TOC entry 3339 (class 0 OID 16565)
+-- Dependencies: 245
 -- Data for Name: quantum_implementation_revisions; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3355 (class 0 OID 16585)
--- Dependencies: 251
+-- TOC entry 3343 (class 0 OID 16583)
+-- Dependencies: 249
 -- Data for Name: software_platform_cloud_services; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3356 (class 0 OID 16588)
--- Dependencies: 252
+-- TOC entry 3344 (class 0 OID 16586)
+-- Dependencies: 250
 -- Data for Name: software_platforms_compute_resources; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3358 (class 0 OID 16597)
--- Dependencies: 254
+-- TOC entry 3346 (class 0 OID 16595)
+-- Dependencies: 252
 -- Data for Name: tosca_application; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3359 (class 0 OID 16603)
--- Dependencies: 255
+-- TOC entry 3347 (class 0 OID 16601)
+-- Dependencies: 253
 -- Data for Name: tosca_application_revisions; Type: TABLE DATA; Schema: public; Owner: planqk
 --
 
 
 
 --
--- TOC entry 3365 (class 0 OID 0)
--- Dependencies: 227
+-- TOC entry 3354 (class 0 OID 0)
+-- Dependencies: 225
 -- Name: hibernate_sequence; Type: SEQUENCE SET; Schema: public; Owner: planqk
 --
 
 SELECT pg_catalog.setval('public.hibernate_sequence', 7, true);
 
 
--- Completed on 2023-12-20 09:41:30 CET
+-- Completed on 2023-10-30 10:06:06 CET
 
 --
 -- PostgreSQL database dump complete
 --
-
